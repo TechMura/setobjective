@@ -1,0 +1,19 @@
+<div class="second-header">
+  <div class="second-header-contents">
+    <div class="lists-left">
+      <%# やる気が出る名言的なのをスクロールできたらいいな %>
+      <div class="user-name">今日も一日頑張ろう！</div>
+      <%# //やる気が出る名言的なのをスクロールできたらいいな %>
+    </div>
+    <% if user_signed_in? %>
+      <ul class="lists-right">
+        <li><%= link_to 'ログアウト', destroy_user_session_path, class: "logout", method: :delete%></li>
+      </ul>
+    <% else %>
+      <ul class="lists-right">
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login"%></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up"%></li>
+      </ul>
+    <% end %>
+  </div>
+</div>
