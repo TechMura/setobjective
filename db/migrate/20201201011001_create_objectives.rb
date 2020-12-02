@@ -4,7 +4,7 @@ class CreateObjectives < ActiveRecord::Migration[6.0]
       t.string      :declaration,   null: false
       t.text        :reason,        null: false
       t.text        :reward,        null: false
-      # t.references  :user,          foreign_key: true
+      t.boolean     :set_flag,      default: false
       t.timestamps
     end
   end

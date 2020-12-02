@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_031258) do
     t.string "declaration", null: false
     t.text "reason", null: false
     t.text "reward", null: false
+    t.boolean "set_flag", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"

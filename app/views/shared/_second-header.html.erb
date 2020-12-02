@@ -1,12 +1,15 @@
 <div class="second-header">
   <div class="second-header-contents">
     <div class="lists-left">
-      <%# やる気が出る名言的なのをスクロールできたらいいな %>
-      <div class="user-name">今日も一日頑張ろう！</div>
-      <%# //やる気が出る名言的なのをスクロールできたらいいな %>
+      <% if user_signed_in? %>
+        <div class="user-name">ようこそ<%= link_to current_user.nickname, "#" %>さん</div>
+      <% end %>
     </div>
     <% if user_signed_in? %>
       <ul class="lists-right">
+        <%# 目標設定は仮で作成 %>
+        <li><%= link_to '目標設定', new_objective_path, class: "logout" %></li>
+        <%# //目標設定は仮で作成 %>
         <li><%= link_to 'ログアウト', destroy_user_session_path, class: "logout", method: :delete%></li>
       </ul>
     <% else %>
