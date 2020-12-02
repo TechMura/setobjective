@@ -1,0 +1,30 @@
+<div class="contents">
+  <div class="container">
+    <h2>Set Objective</h2>
+    <%= form_with model: @objective, url: objectives_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <div class="field">
+        <%= f.label :declaration %><br />
+        <%= f.text_field :declaration, autofocus: true %>
+      </div>
+      
+      <div class="field">
+        <%= f.label :reason %><br />
+        <%= f.text_field :reason, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :reward %><br />
+        <%= f.text_field :reward, autofocus: true %>
+      </div>
+      
+      <div class="field">
+        <%= f.label :set_flag %>
+        <%= f.check_box :set_flag %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "登録" %>
+      </div>
+    <% end %>
+  </div>
+</div>

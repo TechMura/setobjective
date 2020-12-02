@@ -19,6 +19,7 @@
 | declaration  | string     | null:  false                   |
 | reason       | text       | null:  false                   |
 | reward       | text       | null:  false                   |
+| set_flag     | boolean    | default: false                 |
 | user         | references | null:  false,foreign_key: true |
 
 ### Association
