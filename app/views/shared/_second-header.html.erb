@@ -2,13 +2,13 @@
   <div class="second-header-contents">
     <div class="lists-left">
       <% if user_signed_in? %>
-        <div class="user-name">ようこそ<%= link_to current_user.nickname, "#" %>さん</div>
+        <div class="user-name"><%= link_to "マイページ", user_path(current_user.id) %></div>
       <% end %>
     </div>
     <% if user_signed_in? %>
       <ul class="lists-right">
         <%# 目標設定は仮で作成 %>
-        <li><%= link_to '目標設定', new_objective_path, class: "logout" %></li>
+        <li><%= link_to '新しい目標を設定', new_objective_path, class: "make-objective-btn" %></li>
         <%# //目標設定は仮で作成 %>
         <li><%= link_to 'ログアウト', destroy_user_session_path, class: "logout", method: :delete%></li>
       </ul>

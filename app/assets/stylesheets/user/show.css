@@ -1,0 +1,11 @@
+.objective-lists{
+  width: 70%;
+  background-color: aqua;
+  margin: 10px auto;
+  font-size: 30px;
+}
+
+.objective-list{
+  background-color: burlywood;
+  margin: 10px 0px;
+}
