@@ -34,7 +34,6 @@
 | todo        | string     | null:  false                    |
 | time        | integer    | null:  true                     |
 | effect      | text       | null:  true                     |
-| unit_id     | integer    | null:  true                     |
 | day_week_id | integer    | null:  false                    |
 | target      | references | null:  false,foreign_key: true  |
 

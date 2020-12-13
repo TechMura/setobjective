@@ -1,0 +1,62 @@
+<div class="contents">
+  <div class="container">
+    <div>
+      <table>
+        <tr>
+          <th>日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th>土</th>
+        </tr>
+        <tr>
+          <td>
+            <ul class="menu-list"></ul>
+          </td>
+          <td>
+            <ul class="menu-list"></ul>
+          </td>
+          <td>
+            <ul class="menu-list"></ul>
+          </td>
+          <td>
+            <ul class="menu-list"></ul>
+          </td>
+          <td>
+            <ul class="menu-list"></ul>
+          </td>
+          <td>
+            <ul class="menu-list"></ul>
+          </td>
+          <td>
+            <ul class="menu-list"></ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <%= form_with model: @menus, url: menus_path, id: 'new_memos', class: 'new_memos', local: true do |f| %>
+      <div class="menu-field">
+        <%= f.label :week %>
+        <div><%= f.collection_select(:week_id, Week.all, :id, :name, {include_blank: "曜日を選択して下さい"}, {class:"week-select"}) %></div>
+      </div>
+      <div class=menu-field >
+        <%= f.label :todo %>
+        <%= f.text_field :todo, autofocus: true %>
+      </div>
+      <div class=menu-field>
+        <%= f.label :time %>
+        <%= f.text_field :time %>
+      </div>
+      <div class=menu-field>
+        <%= f.label :effect %>
+        <%= f.text_area :effect%>
+      </div>
+      <div class="menu-action">
+        <button type="button" class="menu-action-btn" id="add-btn">追加</button>
+        <%= f.submit "登録", class:"menu-action-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
