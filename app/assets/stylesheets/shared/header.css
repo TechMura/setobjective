@@ -7,6 +7,10 @@ a{
   text-decoration: none;
 }
 
+.hidden{
+  display:none;
+}
+
 .back-screen{
   background-color: #e4e4e4;
   height: 100vh;
