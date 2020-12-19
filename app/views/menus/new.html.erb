@@ -36,27 +36,27 @@
         </tr>
       </table>
     </div>
-    <%= form_with model: @menus, url: menus_path, id: 'new_memos', class: 'new_memos', local: true do |f| %>
+    <%= form_with model: @menu, url: menus_path, id: 'new-memos', class: 'new-memos', local: true do |f| %>
       <div class="menu-field">
         <%= f.label :week %>
         <div><%= f.collection_select(:week_id, Week.all, :id, :name, {include_blank: "曜日を選択して下さい"}, {class:"week-select"}) %></div>
       </div>
-      <div id="week-list" class="hidden"></div>
+      <div id="week-list"></div>
       <div class=menu-field >
         <%= f.label :todo %>
         <%= f.text_field :todo, autofocus: true %>
       </div>
-      <div id="todo-list" class="hidden"></div>
+      <div id="todo-list"></div>
       <div class=menu-field>
         <%= f.label :time %>
         <%= f.text_field :time %>
       </div>
-      <div id="time-list" class="hidden"></div>
+      <div id="time-list"></div>
       <div class=menu-field>
         <%= f.label :effect %>
         <%= f.text_area :effect%>
       </div>
-      <div id="effect-list" class="hidden"></div>
+      <div id="effect-list"></div>
       <div class="menu-action">
         <button type="button" class="menu-action-btn" id="add-btn">追加</button>
         <%= f.submit "登録", class:"menu-action-btn", id: "menu-action-btn" %>

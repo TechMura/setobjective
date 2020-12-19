@@ -1,5 +1,5 @@
 class ObjectivesController < ApplicationController
-  before_action :set_objective, only: [:index, :create]
+  before_action :set_objective, only: [:index]
 
   def index
   end
@@ -10,13 +10,12 @@ class ObjectivesController < ApplicationController
 
   def create
     @new_objective = Objective.new(objective_params)
-    if @objective.present? && @new_objective.set_flag = "1"
-      @objective.update(set_flag: "0")
+    unless @new_objective.valid?
+      render :new and return
     end
-    if @new_objective.valid?
-      @new_objective.save
-      redirect_to root_path
-    end
+    session["new_objective_data"] = {objective: @new_objective.attributes}
+    redirect_to new_menu_path
+
   end
 
   private

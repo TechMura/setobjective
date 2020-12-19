@@ -1,6 +1,38 @@
 
 /*contents,containerは'user/reg_reg.css'に記入 */
 
+/* objective 登録画面 */
+
+.objective-field{
+  padding: 0px 50px;
+  margin: 10px 10px;
+}
+
+.check-field{
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.new-objective input[name="commit"]{
+  display: block;
+  margin: 20px auto;
+}
+
+input[name="objective[declaration]"],
+input[name="objective[reason]"],
+input[name="objective[reward]"]
+{
+  display: block;
+  margin: 0px auto;
+  font-size: 15px;
+  width: 60%;
+  height: 30px;
+}
+
+
+
+/* menu登録画面 */
 table{
   height: 30vh;
   width:99%;
@@ -48,20 +80,10 @@ th{
 	top: -3px;
 }
 
-.menu-field, .menu-action{
-  padding: 0px 50px;
-  margin: 10px 10px;
-}
-
-.new_memos{
-  width: 60%;
-  margin: 0px auto;
-}
-
-input[name="todo"],
-input[name="time"],
+input[name="menu[todo]"],
+input[name="menu[time]"],
 .menu-field div,
-textarea[name="effect"]
+textarea[name="menu[effect]"]
 {
   display: block;
   margin: 0px auto;
@@ -70,7 +92,7 @@ textarea[name="effect"]
   height: 30px;
 }
 
-textarea[name="effect"]{
+textarea[name="menu[effect]"]{
   height: 90px;
 }
 
@@ -88,14 +110,31 @@ textarea[name="effect"]{
   width: 60%;
 }
 
-.menu-action-btn{
+
+/* objective, menu 共通 */
+
+.new-memos,
+.new-objective{
+  width: 60%;
+  margin: 0px auto;
+}
+
+.menu-action-btn,
+.objective-action-btn{
   color: #FFFFFF;
   background-color: #33e1ca;
   border: 0px;
   text-align: center;
   font-size: 20px;
-  width: 30%;
+  width: 80px;
   height: 35px;
   border-radius:30px;
   margin: 10px auto 30px;
+}
+
+.menu-field,
+.menu-action,
+.objective-action{
+  padding: 0px 50px;
+  margin: 10px auto;
 }
