@@ -1,9 +1,9 @@
-<div class="objective-contents">
-  <div class="objective-container"> 
+<div class="contents">
+  <div class="container"> 
     <div class="objective-lists">
-      <% @objectives.each do |objectives| %> 
+      <% @objectives.each do |objective| %> 
         <div class="objective-list">
-          <%= objectives.declaration %>
+          <%= link_to "#{objective.declaration}", objective_path(objective.id) %>
         </div>
       <% end %>
     </div>

@@ -1,0 +1,73 @@
+<div class="contents">
+  <div class="container"> 
+    <div class="objective-contents">
+      <div><span>目標　：</span><span><%= @objective.declaration %></span></div>
+      <div><span>理由　：</span><span><%= @objective.reason %></span></div>
+      <div><span>ご褒美：</span><span><%= @objective.reward %></span></div>
+      <%= link_to "メニュー追加", add_edit_menus_path(objective_id: @objective.id) %>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>日</th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th>土</th>
+        </tr>
+        <tr>
+          <td>
+            <ul class="menu-list">
+              <% @objective.menus.where(week_id: 0).each do |menu| %>
+                <li><%= menu.todo %></li>
+              <% end %>
+            </ul>
+          </td>
+          <td>
+            <ul class="menu-list">
+              <% @objective.menus.where(week_id: 1).each do |menu| %>
+                <li><%= menu.todo %></li>
+              <% end %>
+            </ul>
+          </td>
+          <td>
+            <ul class="menu-list">
+              <% @objective.menus.where(week_id: 2).each do |menu| %>
+                <li><%= menu.todo %></li>
+              <% end %>
+              </ul>
+          </td>
+          <td>
+            <ul class="menu-list">
+              <% @objective.menus.where(week_id: 3).each do |menu| %>
+                <li><%= menu.todo %></li>
+              <% end %>
+            </ul>
+          </td>
+          <td>
+            <ul class="menu-list">
+              <% @objective.menus.where(week_id: 4).each do |menu| %>
+                <li><%= menu.todo %></li>
+              <% end %></ul>
+          </td>
+          <td>
+            <ul class="menu-list">
+              <% @objective.menus.where(week_id: 5).each do |menu| %>
+                <li><%= menu.todo %></li>
+              <% end %>
+            </ul>
+          </td>
+          <td>
+            <ul class="menu-list">
+              <% @objective.menus.where(week_id: 6).each do |menu| %>
+                <li><%= menu.todo %></li>
+              <% end %>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

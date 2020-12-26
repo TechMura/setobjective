@@ -8,7 +8,7 @@ a{
 }
 
 .hidden{
-  display:none;
+  display: none;
 }
 
 .back-screen{
@@ -16,17 +16,52 @@ a{
   height: 100vh;
 }
 
+li{
+  list-style: none;
+}
+
 .header{
-  height: 60px;
-  margin:0px auto;
+  height: 50px;
   background-color: #FFFFFF;
 }
 
-.logo{
-  width: 60%;
-  margin: auto;
+.header-contents{
+  height: 100%;
+  width: 50%;
+  margin: 20px auto 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.logo-name{
-  font-size: 40px;
-  color: #000000;
+
+.lists-left{
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.lists-right{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+
+
+.login,
+.logout{
+  font-size: 20px;
+  margin: 0px 10px;
+  font-weight: bold; 
+  color: #2fb3f0;
+  border: 2px solid #2fb3f0;
+  border-radius: 5px;
+}
+
+.login{
+  padding: 5px;
+}
+
+.logout{
+  padding: 5px 15px;
 }

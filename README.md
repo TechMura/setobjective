@@ -29,13 +29,14 @@
 
 ## menusテーブル
 
-| Column      | Type       | Options                         |
-| ----------- | ---------- | ------------------------------- |
-| todo        | string     | null:  false                    |
-| time        | integer    | null:  true                     |
-| effect      | text       | null:  true                     |
-| day_week_id | integer    | null:  false                    |
-| target      | references | null:  false,foreign_key: true  |
+| Column        | Type       | Options                             |
+| ------------- | ---------- | ----------------------------------- |
+| todo          | string     | null:      false                    |
+| time          | integer    | null:      true                     |
+| effect        | text       | null:      true                     |
+| day_week_id   | integer    | null:      false                    |
+| achieve_flag  | boolean    | default:   false                    |
+| target        | references | null:      false,foreign_key: true  |
 
 ### Association
 -belongs_to :target

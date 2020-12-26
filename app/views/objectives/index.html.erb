@@ -1,19 +1,24 @@
-<div class="objective-contents">
-  <div class= "objective-container">
+<div class="contents">
+  <div class= "container">
+    <div class="date" id="date"></div>
     <div class="objective-declaration">
       <% if @objective.present? %>
-        <%= @objective.declaration %>
+        <span>目標：</span><%= @objective.declaration %>
+      <% elsif user_signed_in?%>
+        <span>目標を設定しよう</span>
       <% else %>
-        目標を設定しよう
+        <span>ログインしよう</span>
       <% end %>
     </div>
-    <div class="objective-title">今日やること</div>
-    <div class="todo-rate"> 
-      <div>○/○達成</div>
-    </div>
-    <div class="todo-lists">
-      <div class="todo-action">□toDo1</div>
-      <div class="todo-action">□toDo2</div>
+    <div class="today-menus-contents">
+      <% if @menus.present? %>
+        <ul class="today-menus">  
+          <% @menus.each do |menu| %>
+            <li class="today-menu"><button class="achieve-button today-menu-contents">未完了</button><span class="today-menu-contents"><%= menu.todo %></span></li>
+          <% end %>
+        </ul>
+      <% else %>
+      <% end %>
     </div>
   </div>
 </div>

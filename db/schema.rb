@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_230056) do
     t.text "time"
     t.text "effect", null: false
     t.integer "week_id", null: false
+    t.boolean "achieve_flag", default: false
     t.bigint "objective_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -2,6 +2,10 @@ class ObjectivesController < ApplicationController
   before_action :set_objective, only: [:index]
 
   def index
+    if @objective.presence
+      now = Time.now
+      @menus = @objective.menus.where(week_id: now.wday)
+    end
   end
 
   def new
@@ -14,8 +18,12 @@ class ObjectivesController < ApplicationController
       render :new and return
     end
     session["new_objective_data"] = {objective: @new_objective.attributes}
-    redirect_to new_menu_path
+    @menu = Menu.new
+    render new_menu_path
+  end
 
+  def show
+    @objective = Objective.find(params[:id])
   end
 
   private
@@ -25,7 +33,9 @@ class ObjectivesController < ApplicationController
   end
 
   def set_objective
-    @objective = Objective.find_by(set_flag: "1")
+    if user_signed_in?
+      @objective = Objective.find_by(user_id: current_user.id,set_flag: "1")
+    end
   end
 
 end

@@ -1,5 +1,20 @@
 <header class="header">
-  <div class=logo>
-    <%= link_to "アプリ名", root_path, class: "logo-name"%>
+  <div class="header-contents">
+    <div class="lists-left">
+      <% if user_signed_in? %>
+        <span><%= current_user.nickname %>さん、今日も1日頑張りましょう</span>
+      <% end %>
+    </div>
+    <% if user_signed_in? %>
+      <ul class="lists-right">
+        <li><%= link_to "マイページ", user_path(current_user.id), class: "login" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, class: "login", method: :delete%></li>
+      </ul>
+    <% else %>
+      <ul class="lists-right">
+        <li><%= link_to 'ログイン', new_user_session_path, class: "logout"%></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "logout"%></li>
+      </ul>
+    <% end %>
   </div>
 </header>

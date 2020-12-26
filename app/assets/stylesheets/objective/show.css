@@ -1,0 +1,12 @@
+.objective-contents{
+  font-size: 30px;
+}
+
+.objective-contents div span{
+  position: relative;
+  left: 100px;
+}
+
+.schedule-title{
+  font-size: 20px;
+}

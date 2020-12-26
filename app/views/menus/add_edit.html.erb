@@ -1,0 +1,6 @@
+<div class="contents">
+  <div class="container"> 
+    <%= render partial: "shared/weektable", locals: {objective: @objective} %>
+    <%= render partial: "shared/menuform", locals: { menu: @menus, url: add_update_menus_path } %>
+  </div>
+</div>

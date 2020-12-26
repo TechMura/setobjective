@@ -113,7 +113,7 @@ textarea[name="menu[effect]"]{
 
 /* objective, menu 共通 */
 
-.new-memos,
+.new-memus,
 .new-objective{
   width: 60%;
   margin: 0px auto;
@@ -135,6 +135,7 @@ textarea[name="menu[effect]"]{
 .menu-field,
 .menu-action,
 .objective-action{
+  display: block;
   padding: 0px 50px;
   margin: 10px auto;
 }
