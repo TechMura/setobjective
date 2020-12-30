@@ -46,6 +46,7 @@
               <% if objective.present? %>
                 <% objective.menus.where(week_id: 3).each do |menu| %>
                   <li><%= menu.todo %></li>
+                  <%= button_to 'bottun', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
                 <% end %>
               <% end %>
             </ul>

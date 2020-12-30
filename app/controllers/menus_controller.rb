@@ -56,6 +56,18 @@ class MenusController < ApplicationController
     @menu = Menu.new
   end
 
+  def achieved
+    menu = Menu.find(params[:id])
+    if menu.achieve_flag
+      menu.update(achieve_flag: false)
+    else
+      menu.update(achieve_flag: true)
+    end
+
+    item = Menu.find(params[:id])
+    render json: { menu: item }
+  end
+
   private
 
   def menus_params

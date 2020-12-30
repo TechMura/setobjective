@@ -12,14 +12,13 @@
     </div>
     <div class="today-menus-contents">
       <% if @menus.present? %>
-        <ul class="today-menus">  
-          <% @menus.each do |menu| %>
-            <li class="today-menu">
-              <input type="checkbox"class="achieve-check" id="check" name="check">
-              <%# <button class="achieve-button today-menu-contents">未完了</button> %>
-              <label class="today-menu-contents"><%= menu.todo %></label>
-            </li>
-          <% end %>
+        <ul class="today-menus">
+            <% @menus.each do |menu| %>
+              <li class="today-menu">
+                <input type="checkbox"class="achieve-check" data-id= <%= menu.id %> data-check=<%= menu.achieve_flag %> name="check">
+                <label class="today-menu-contents"><%= menu.todo %></label>
+              </li>
+            <% end %>
         </ul>
       <% else %>
       <% end %>

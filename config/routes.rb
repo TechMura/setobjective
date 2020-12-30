@@ -9,6 +9,10 @@ Rails.application.routes.draw do
       post 'add_update'
       get 'multi_delete'
     end
+    member do
+      get 'achieved'
+    end
   end
+
 
 end
