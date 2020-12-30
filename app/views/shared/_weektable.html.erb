@@ -14,7 +14,9 @@
             <ul class="menu-list">
               <% if objective.present? %>
                 <% objective.menus.where(week_id: 0).each do |menu| %>
-                  <li><%= menu.todo %></li>
+                  <li><%= menu.todo %>
+                  <%= button_to 'bottun', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
+                  </li>
                 <% end %>
               <% end %>
             </ul>
@@ -24,6 +26,7 @@
               <% if objective.present? %>
                 <% objective.menus.where(week_id: 1).each do |menu| %>
                   <li><%= menu.todo %></li>
+                  <%= button_to 'bottun', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
                 <% end %>
               <% end %>
             </ul>
@@ -33,6 +36,7 @@
               <% if objective.present? %>
                 <% objective.menus.where(week_id: 2).each do |menu| %>
                   <li><%= menu.todo %></li>
+                  <%= button_to 'bottun', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
                 <% end %>
               <% end %>
             </ul>

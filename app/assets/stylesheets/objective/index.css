@@ -33,3 +33,37 @@
 .today-menu-contents{
   margin: 10px;
 }
+
+.today-menu input[type="checkbox"]{
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	/* transition: all 0.15s ease-out 0s; */
+	color: #FFFFFF;
+  border: 1px solid #2fb3f0;
+  border-radius: 20%;
+	outline: none;
+	background: #FFFFFF;
+	-webkit-appearance: none;
+	        appearance: none;
+}
+
+.today-menu input[type="checkbox"]:checked{
+  background-color: #2fb3f0;
+}
+
+.today-menu input[type="checkbox"]:checked::before{
+  font-size: 15px;
+	line-height: 20px;
+	position: absolute;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	content: '✔';
+	text-align: center;
+}

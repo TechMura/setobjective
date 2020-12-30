@@ -7,6 +7,7 @@
     </div>
     <% if user_signed_in? %>
       <ul class="lists-right">
+        <li><%= link_to "トップページ", root_path, class: "login" %></li>
         <li><%= link_to "マイページ", user_path(current_user.id), class: "login" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, class: "login", method: :delete%></li>
       </ul>

@@ -5,6 +5,7 @@
       <div><span>理由　：</span><span><%= @objective.reason %></span></div>
       <div><span>ご褒美：</span><span><%= @objective.reward %></span></div>
       <%= link_to "メニュー追加", add_edit_menus_path(objective_id: @objective.id) %>
+      <%= link_to "メニュー削除", multi_delete_menus_path(objective_id: @objective.id) %>
     </div>
     <div>
       <table>

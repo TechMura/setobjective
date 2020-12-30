@@ -1,4 +1,4 @@
-function Menu(){
+function addMenu(){
   addMenuNum = 0
   const addMenuBtn = document.getElementById("add-btn");
   addMenuBtn.addEventListener('click',function(){
@@ -43,17 +43,17 @@ function Menu(){
 
       // スケジュール表に追加する
       let addMenuContents = document.createElement('li') ;
-      let deleteMenu = document.createElement('button');
+      let deleteMenuBtn = document.createElement('button');
 
       addMenuContents.textContent = todoContents.value;
       addMenuContents.id = `menu${addMenuNum}`;
-      deleteMenu.textContent = "削除";
-      deleteMenu.id = `delete-btn${addMenuNum}`;
+      deleteMenuBtn.textContent = "削除";
+      deleteMenuBtn.id = `delete-btn${addMenuNum}`;
       weekTableData[weekDayContents.value].appendChild(addMenuContents);
-      addMenuContents.appendChild(deleteMenu);
+      addMenuContents.appendChild(deleteMenuBtn);
 
       // 削除ボタンを押したらスケジュールから削除する
-      deleteMenu.addEventListener('click',function(){
+      deleteMenuBtn.addEventListener('click',function(){
         this.parentElement.remove();
         weekInputHtml.remove();
         todoInputHtml.remove();
@@ -67,6 +67,6 @@ function Menu(){
 
 window.addEventListener('load',function(){
   if (document.getElementById("add-btn") != null){
-    Menu();
+    addMenu();
   };
-})
+});
