@@ -49,6 +49,7 @@ function addMenu(){
       addMenuContents.id = `menu${addMenuNum}`;
       deleteMenuBtn.textContent = "削除";
       deleteMenuBtn.id = `delete-btn${addMenuNum}`;
+      deleteMenuBtn.style.display = 'block';
       weekTableData[weekDayContents.value].appendChild(addMenuContents);
       addMenuContents.appendChild(deleteMenuBtn);
 

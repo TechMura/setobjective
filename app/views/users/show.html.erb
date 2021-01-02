@@ -1,10 +1,11 @@
 <div class="contents">
   <div class="container"> 
+    <h1>目標一覧</h1>
     <div class="objective-lists">
-      <%= link_to '新しい目標を設定', new_objective_path %>
+      <%= link_to '＋新しい目標を追加', new_objective_path, class: "add-objective-link" %>
       <% @objectives.each do |objective| %> 
-        <div class="objective-list">
-          <%= link_to "#{objective.declaration}", objective_path(objective.id) %>
+        <div>
+          <%= link_to "#{objective.declaration}", objective_path(objective.id) ,class: "objective-list"%>
         </div>
       <% end %>
     </div>

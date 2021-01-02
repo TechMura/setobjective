@@ -4,8 +4,10 @@ function achieveMenu(){
   const menus = document.querySelectorAll(".achieve-check")
   menus.forEach(function(menu){
     check = menu.getAttribute("data-check");
-    if (check == "true"){
+    if (check === "true"){
       menu.setAttribute("checked", "checked");
+    } else if (check === "false"){
+      menu.removeAttribute("checked")
     }
 
 

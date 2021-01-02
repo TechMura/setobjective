@@ -1,6 +1,6 @@
 <div class="contents">
   <div class= "container">
-    <div class="date" id="date"></div>
+    <span class="date">日付：</span><span class="date" id="date"></span>
     <div class="objective-declaration">
       <% if @objective.present? %>
         <span>目標：</span><%= @objective.declaration %>
@@ -21,6 +21,7 @@
             <% end %>
         </ul>
       <% else %>
+        <div>今日のメニューはありません</div>
       <% end %>
     </div>
   </div>

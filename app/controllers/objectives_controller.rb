@@ -15,6 +15,7 @@ class ObjectivesController < ApplicationController
   def create
     @new_objective = Objective.new(objective_params)
     unless @new_objective.valid?
+      @objective = @new_objective
       render :new and return
     end
     session["new_objective_data"] = {objective: @new_objective.attributes}
@@ -24,6 +25,25 @@ class ObjectivesController < ApplicationController
 
   def show
     @objective = Objective.find(params[:id])
+  end
+
+  def edit
+    @objective = Objective.find(params[:id])
+  end
+
+  def update
+    @objective = Objective.find(params[:id])
+    if @objective.update(objective_params)
+      redirect_to objective_path(@objective.id)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @objective = Objective.find(params[:id])
+    @objective.destroy
+    redirect_to user_path(current_user.id)
   end
 
   private

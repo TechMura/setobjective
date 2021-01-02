@@ -14,7 +14,7 @@
   margin: 20px auto;
 }
 
-.new-objective input[name="commit"]{
+.form-objective input[name="commit"]{
   display: block;
   margin: 20px auto;
 }
@@ -61,6 +61,8 @@ th{
   border: 1px solid #000000;
   vertical-align: text-top;
   padding-left: 1.5em;
+  white-space: nowrap;
+  overflow: auto;
 }
 
 .menu-list li{
@@ -114,13 +116,14 @@ textarea[name="menu[effect]"]{
 /* objective, menu 共通 */
 
 .new-memus,
-.new-objective{
+.form-objective{
   width: 60%;
   margin: 0px auto;
 }
 
 .menu-action-btn,
 .objective-action-btn{
+  display: block;
   color: #FFFFFF;
   background-color: #33e1ca;
   border: 0px;
@@ -131,11 +134,27 @@ textarea[name="menu[effect]"]{
   border-radius:30px;
   margin: 10px auto 30px;
 }
+.end-action-btn{
+  display: block;
+  color: #FFFFFF;
+  background-color: #33e1ca;
+  border: 0px;
+  text-align: center;
+  font-size: 20px;
+  width: 100px;
+  height: 35px;
+  border-radius:30px;
+  margin: 10px auto 30px;
+}
 
 .menu-field,
 .menu-action,
 .objective-action{
-  display: block;
   padding: 0px 50px;
   margin: 10px auto;
+}
+
+.menu-field,
+.objective-action{
+  display: block;
 }

@@ -6,5 +6,5 @@ class Objective < ApplicationRecord
   # validates :set_flag, presence: false
 
   belongs_to :user
-  has_many  :menus
+  has_many  :menus, dependent: :destroy
 end

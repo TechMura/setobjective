@@ -5,6 +5,29 @@
   font-size: 30px;
 }
 
-.objective-list{
+.objective-lists div{
   margin: 10px 0px;
+  width: 100%;
+}
+
+
+.objective-list{
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px 0px 10px 10px;
+}
+
+.add-objective-link{
+  width: 100%;
+  border: 1px dashed black;
+  padding: 10px 10px 10px 10px;
+}
+
+.edit-btn{
+  display: flex;
+}
+
+.edit-btn .button_to{
+  height: 25px;
+  margin-left: 10px;
 }

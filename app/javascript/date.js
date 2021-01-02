@@ -1,7 +1,7 @@
 function date(){
   let time = new Date();
 
-  month = time.getMonth();
+  month = time.getMonth()+1;
   day = time.getDate();
   dayOfWeek = time.getDay();
   var dayOfWeekStr = [ "日", "月", "火", "水", "木", "金", "土" ][dayOfWeek] ;	
