@@ -10,3 +10,37 @@
 .schedule-title{
   font-size: 20px;
 }
+
+.menu-detail{
+  font-size: 20px;
+  font-size: 30px;
+  margin: 0px 40px;
+  padding-top: 5px ;
+  display: flex;
+  
+}
+
+.menu-detail div{
+  font-size: 20px;
+  height: 50px;
+}
+
+.menu-detail-title{
+  display: inline-block;
+  padding: 10px 0px;
+  width: 100px;
+}
+
+.menu-detail-contents{
+  padding: 9px 5px;
+  display: inline-block;
+  width: calc(100% - 100px);
+  border: 1px solid #747474;
+  border-radius: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+#show-effect{
+  height: 100px;
+}

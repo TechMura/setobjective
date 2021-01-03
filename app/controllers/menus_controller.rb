@@ -21,6 +21,9 @@ class MenusController < ApplicationController
     redirect_to root_path and return
   end
 
+  def show
+  end
+
   def destroy
     @objective_id = params[:objective_id]
     @menu = Menu.find(params[:id])

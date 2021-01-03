@@ -23,56 +23,32 @@
           <th>土</th>
         </tr>
         <tr>
-          <td>
-            <ul class="menu-list">
-              <% @objective.menus.where(week_id: 0).each do |menu| %>
-                <li><%= menu.todo %></li>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% @objective.menus.where(week_id: 1).each do |menu| %>
-                <li><%= menu.todo %></li>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% @objective.menus.where(week_id: 2).each do |menu| %>
-                <li><%= menu.todo %></li>
-              <% end %>
+          <% 7.times do |num| %>
+            <td>
+              <ul class="menu-list">
+                <% if @objective.present? %>
+                    <% @objective.menus.where(week_id: num).each do |menu| %>
+                      <li class="menu-list-todo" data-todo="<%= menu.todo %>" data-time= "<%= menu.time %>" data-effect="<%=menu.effect%>"><%= menu.todo %></li>
+                    <% end %>
+                <% end %>
               </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% @objective.menus.where(week_id: 3).each do |menu| %>
-                <li><%= menu.todo %></li>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% @objective.menus.where(week_id: 4).each do |menu| %>
-                <li><%= menu.todo %></li>
-              <% end %></ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% @objective.menus.where(week_id: 5).each do |menu| %>
-                <li><%= menu.todo %></li>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% @objective.menus.where(week_id: 6).each do |menu| %>
-                <li><%= menu.todo %></li>
-              <% end %>
-            </ul>
-          </td>
+            </td>
+          <% end %>
         </tr>
       </table>
+    </div>
+    <div>※メニューをクリックしたら内容が表示されます</div>
+    <div class="menu-detail">
+        <div class="menu-detail-title">メニュー：</div>
+        <div id="show-menu" class="menu-detail-contents"></div>
+    </div>
+    <div class="menu-detail">
+        <div class="menu-detail-title">回数　　：</div>
+        <div id="show-time" class="menu-detail-contents"></div>
+    </div>
+    <div class="menu-detail">
+        <div class="menu-detail-title">効果　　：</div>
+        <div id="show-effect" class="menu-detail-contents"></div>
     </div>
   </div>
 </div>

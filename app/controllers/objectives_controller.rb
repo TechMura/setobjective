@@ -25,6 +25,7 @@ class ObjectivesController < ApplicationController
 
   def show
     @objective = Objective.find(params[:id])
+    @menus = @objective.menus.to_json
   end
 
   def edit

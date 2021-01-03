@@ -15,6 +15,7 @@
 
 .today-menus-contents{
   height: 450px;
+  width: 100%;
   font-size: 25px;
   overflow-y: auto;
   padding: 0px 10px;
@@ -30,18 +31,24 @@
   align-items: center;
 }
 
-.today-menu-contents{
+.today-menu-todo{
   margin: 10px;
+  height: 50px;
+  padding: 5px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #747474;
+  border-radius: 5px;
 }
 
 .today-menu input[type="checkbox"]{
 	position: relative;
 	right: 0;
 	bottom: 0;
-	left: 0;
+  left: 0;
 	width: 20px;
 	height: 20px;
-	margin-right: 0.5rem;
+  margin-right: 0.5rem;
 	cursor: pointer;
 	/* transition: all 0.15s ease-out 0s; */
 	color: #FFFFFF;
@@ -64,6 +71,7 @@
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	content: '✔';
+  content: '✔︎';
+  color: #FFFFFF;
 	text-align: center;
 }

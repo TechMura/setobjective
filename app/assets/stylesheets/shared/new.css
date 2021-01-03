@@ -67,7 +67,7 @@ th{
 
 .menu-list li{
   list-style: none;
-
+  cursor : pointer;
 }
 
 .menu-list li:before {

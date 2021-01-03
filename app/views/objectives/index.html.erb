@@ -16,7 +16,7 @@
             <% @menus.each do |menu| %>
               <li class="today-menu">
                 <input type="checkbox"class="achieve-check" data-id= <%= menu.id %> data-check=<%= menu.achieve_flag %> name="check">
-                <label class="today-menu-contents"><%= menu.todo %></label>
+                <label class="today-menu-todo"><%= menu.todo %></label>
               </li>
             <% end %>
         </ul>

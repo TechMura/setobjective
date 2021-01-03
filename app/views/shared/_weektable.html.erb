@@ -10,76 +10,19 @@
           <th>土</th>
         </tr>
         <tr>
-          <td>
-            <ul class="menu-list">
-              <% if objective.present? %>
-                <% objective.menus.where(week_id: 0).each do |menu| %>
-                  <li><%= menu.todo %>
-                    <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                  </li>
+          <% 7.times do |num| %>
+            <td>
+              <ul class="menu-list">
+                <% if objective.present? %>
+                    <% objective.menus.where(week_id: num).each do |menu| %>
+                      <li><%= menu.todo %>
+                        <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
+                      </li>
+                    <% end %>
                 <% end %>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% if objective.present? %>
-                <% objective.menus.where(week_id: 1).each do |menu| %>
-                  <li><%= menu.todo %></li>
-                  <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                <% end %>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% if objective.present? %>
-                <% objective.menus.where(week_id: 2).each do |menu| %>
-                  <li><%= menu.todo %></li>
-                  <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                <% end %>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% if objective.present? %>
-                <% objective.menus.where(week_id: 3).each do |menu| %>
-                  <li><%= menu.todo %></li>
-                  <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                <% end %>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% if objective.present? %>
-                <% objective.menus.where(week_id: 4).each do |menu| %>
-                  <li><%= menu.todo %></li>
-                  <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                <% end %></ul>
-              <% end %>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% if objective.present? %>
-                <% objective.menus.where(week_id: 5).each do |menu| %>
-                  <li><%= menu.todo %></li>
-                  <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                <% end %>
-              <% end %>
-            </ul>
-          </td>
-          <td>
-            <ul class="menu-list">
-              <% if objective.present? %>
-                <% objective.menus.where(week_id: 6).each do |menu| %>
-                  <li><%= menu.todo %></li>
-                  <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                <% end %>
-              <% end %>
-            </ul>
-          </td>
+              </ul>
+            </td>
+          <% end %>
         </tr>
       </table>
     </div>
