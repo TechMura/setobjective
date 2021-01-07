@@ -1,7 +1,7 @@
 // const { $ } = require("@rails/ujs");
 
 function achieveMenu(){
-  const menu_checks = document.querySelectorAll(".achieve-check")
+  const menu_checks = document.querySelectorAll(".achieve-check");
   menu_checks.forEach(function(menu_check){
     check = menu_check.getAttribute("data-check");
     if (check === "true"){
@@ -17,23 +17,29 @@ function achieveMenu(){
       XHR.responseType = "json";
       XHR.send();
       XHR.onload=function(){
-        const item = XHR.response.menu_check;
+        if (XHR.status != 200) {
+          alert(`Error ${XHR.status}: ${XHR.statusText}`);
+          return null;          
+        }
+        const item = XHR.response.menu;
+        if (item.achieve_flag == true){
+          menu_check.setAttribute("data-check","true");
+        } else if(item.achieve_flag == false){
+          menu_check.setAttribute("data-check", "false");
+        }
+        Achieve(menu_checks);
       }
-    
-      checkAchieve(menu_checks);
-    
     });
   });
 };
 
-function checkAchieve(menu_checks){
+function Achieve(menu_checks){
   let flag = true
   menu_checks.forEach(function(menu_check){
-    if (menu_check.checked == false){
+    if (menu_check.getAttribute("data-check") == "false"){
       flag = false;
     }
   });
-
   if (flag == true){
     window.alert("今日の目標は達成しました。");
   }

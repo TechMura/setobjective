@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: :show
   root to: 'objectives#index'
   resources :objectives
-  resources :menus, only: [:new, :create, :destroy, :show] do
+  resources :menus, only: [:new, :create, :destroy] do
     collection do
       get 'add_edit'
       post 'add_update'
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
     member do
       get 'achieved'
+      get 'reset_achieve_flag'
     end
   end
 

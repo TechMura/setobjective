@@ -39,17 +39,21 @@ class MenusController < ApplicationController
   end
 
   def add_update
-    @menus = params.require(:menus)
-    objective_id = session["objective_id"]["objective_id"]
-    @menus.each do |key, menuContents|
-      @menu = Menu.new(menuContents.permit(:week_id, :todo, :time, :effect))
-      unless @menu.valid?
-        render :new_menu and return
+    if params.has_key?(:menus)
+      @menus = params.require(:menus)
+      objective_id = session["objective_id"]["objective_id"]
+      @menus.each do |key, menuContents|
+        @menu = Menu.new(menuContents.permit(:week_id, :todo, :time, :effect))
+        unless @menu.valid?
+          render :new_menu and return
+        end
+        @menu.objective_id = objective_id
+        @menu.save
       end
-      @menu.objective_id = objective_id
-      @menu.save
+      redirect_to objective_path(objective_id) and return
+    else
+      render :add_edit
     end
-    redirect_to objective_path(objective_id) and return
   end
 
   def multi_delete
@@ -67,6 +71,13 @@ class MenusController < ApplicationController
       menu.update(achieve_flag: true)
     end
 
+    item = Menu.find(params[:id])
+    render json: { menu: item }
+  end
+
+  def reset_achieve_flag
+    menu = Menu.find(params[:id])
+    menu.update(achieve_flag: false)
     item = Menu.find(params[:id])
     render json: { menu: item }
   end

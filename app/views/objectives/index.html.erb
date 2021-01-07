@@ -3,7 +3,7 @@
     <span class="date">日付：</span><span class="date" id="date"></span>
     <div class="objective-declaration">
       <% if @objective.present? %>
-        <span>目標：</span><%= @objective.declaration %>
+        <span>目標：</span><%= link_to @objective.declaration, objective_path(@objective.id) ,class: "aaa"%>
       <% elsif user_signed_in?%>
         <span>目標を設定しよう</span>
       <% else %>
@@ -15,8 +15,13 @@
         <ul class="today-menus">
             <% @menus.each do |menu| %>
               <li class="today-menu">
-                <input type="checkbox"class="achieve-check" data-id= <%= menu.id %> data-check=<%= menu.achieve_flag %> name="check">
-                <label class="today-menu-todo"><%= menu.todo %></label>
+                <input type="checkbox" class="achieve-check" data-id= <%= menu.id %> data-check=<%= menu.achieve_flag%> data-updated=<%= menu.updated_at %> name="check">
+                <div class="today-menu-todo">
+                  <%= menu.todo %>
+                  <% unless menu.time.blank? %>
+                    <%= " ( #{menu.time} )" %>
+                  <% end %>
+                </div>
               </li>
             <% end %>
         </ul>

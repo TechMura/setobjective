@@ -1,8 +1,10 @@
 .objective-lists{
+  padding: 5px;
   height: 60vh;
   width: 80%;
   margin: 10px auto;
   font-size: 30px;
+  overflow-y: auto;
 }
 
 .objective-lists div{
@@ -15,12 +17,14 @@
   width: 100%;
   margin: 10px 0px;
   padding: 10px 0px 10px 10px;
+  color: #2fb3f0;
 }
 
 .add-objective-link{
   width: 100%;
-  border: 1px dashed black;
+  border: 1px dashed #000000;
   padding: 10px 10px 10px 10px;
+  color: #2fb3f0;
 }
 
 .edit-btn{

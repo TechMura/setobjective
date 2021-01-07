@@ -3,9 +3,9 @@
 }
 
 a{
-  color: #2fb3f0;
   text-decoration: none;
 }
+
 
 h1{
   text-align: center;
@@ -31,7 +31,7 @@ li{
 
 .header-contents{
   height: 100%;
-  width: 50%;
+  width: 60%;
   margin: 20px auto 0px;
   display: flex;
   align-items: center;
