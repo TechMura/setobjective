@@ -42,11 +42,9 @@ function Achieve(menu_checks){
   });
   if (flag == true){
     const achieve_pop = document.getElementById("achieve-pop");
+    const close_btn = document.getElementById("close-btn");
     achieve_pop.classList.remove("hidden");
     achieve_pop.style.opacity = 0;
-    // if (achieve_pop.style.opacity==""){
-    //   achieve_pop.style.opacity = 1;
-    // }
     let opacityInt = achieve_pop.style.opacity * 100;
     intervalId = setInterval(function(){
       opacityInt = opacityInt + 10;
@@ -54,7 +52,10 @@ function Achieve(menu_checks){
       if(achieve_pop.style.opacity >= 1){
         clearInterval(intervalId);
       }
-    },100);
+    },100)
+    close_btn.addEventListener("click",function(){
+      achieve_pop.classList.add("hidden");
+    })
   }
 }
 
