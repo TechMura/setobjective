@@ -4,7 +4,6 @@
   font-size: 40px;
   margin-bottom: 10px;
   background-color: #FFFFFF;
-  position: relative;
 }
 
 .date{
@@ -15,7 +14,7 @@
 }
 
 .today-menus-contents{
-  height: 450px;
+  height: 500px;
   width: 100%;
   font-size: 25px;
   overflow-y: auto;
@@ -65,7 +64,6 @@
 }
 
 .today-menu input[type="checkbox"]:checked::before{
-
   font-size: 15px;
 	line-height: 20px;
 	position: absolute;
@@ -77,9 +75,13 @@
 	text-align: center;
 }
 
+.achieve-pop{
+  position: relative;
+}
+
 .achieve-image{
   position: absolute;
-  top: 50px;
+  top: 80px;
   left: 0;
   right: 0;
   margin: auto;
@@ -87,11 +89,14 @@
 }
 
 .achieve-comment{
+  width: 500px;
   position: absolute;
   text-align: center;
+  color: #fd9148;
   font-size: 30px;
-  top: 90px;
+  top: 120px;
   left: 0;
   right: 0;
+  margin: auto;
   z-index: 2;
 }
