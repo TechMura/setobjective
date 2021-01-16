@@ -3,6 +3,7 @@
     <span class="date">日付：</span><span class="date" id="date"></span>
     <div class="objective-declaration">
       <%= image_tag '達成画象.jpg',class: 'achieve-image', size: '600x400'%>
+      <div class="achieve-comment">今日のやること達成！！</br>お疲れ様！！</div>
       <% if @objective.present? %>
         <span>目標：</span><%= link_to @objective.declaration, objective_path(@objective.id) ,class: "aaa"%>
       <% elsif user_signed_in?%>

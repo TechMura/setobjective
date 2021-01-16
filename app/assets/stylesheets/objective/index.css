@@ -85,3 +85,13 @@
   margin: auto;
   z-index: 1;
 }
+
+.achieve-comment{
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
