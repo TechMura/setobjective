@@ -2,6 +2,7 @@
   <div class= "container">
     <span class="date">日付：</span><span class="date" id="date"></span>
     <div class="objective-declaration">
+      <%= image_tag '達成画象.jpg',class: 'achieve-image', size: '600x400'%>
       <% if @objective.present? %>
         <span>目標：</span><%= link_to @objective.declaration, objective_path(@objective.id) ,class: "aaa"%>
       <% elsif user_signed_in?%>
@@ -10,6 +11,7 @@
         <span>ログイン または 新規登録して下さい</span>
       <% end %>
     </div>
+
     <div class="today-menus-contents">
       <% if @menus.present? %>
         <ul class="today-menus">
