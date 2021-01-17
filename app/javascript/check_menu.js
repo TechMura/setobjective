@@ -41,7 +41,21 @@ function Achieve(menu_checks){
     }
   });
   if (flag == true){
-    window.alert("今日の目標は達成しました。");
+    const achieve_pop = document.getElementById("achieve-pop");
+    const close_btn = document.getElementById("close-btn");
+    achieve_pop.classList.remove("hidden");
+    achieve_pop.style.opacity = 0;
+    let opacityInt = achieve_pop.style.opacity * 100;
+    intervalId = setInterval(function(){
+      opacityInt = opacityInt + 10;
+      achieve_pop.style.opacity = opacityInt / 100;
+      if(achieve_pop.style.opacity >= 1){
+        clearInterval(intervalId);
+      }
+    },100)
+    close_btn.addEventListener("click",function(){
+      achieve_pop.classList.add("hidden");
+    })
   }
 }
 

@@ -15,6 +15,10 @@ h1{
   display: none;
 }
 
+.fade-in{
+  animation: fadein 2s;
+}
+
 .back-screen{
   background-color: #e4e4e4;
   height: 100vh;
