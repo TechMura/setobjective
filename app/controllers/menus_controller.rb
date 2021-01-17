@@ -39,9 +39,10 @@ class MenusController < ApplicationController
   end
 
   def add_update
+    objective_id = session["objective_id"]["objective_id"]
     if params.has_key?(:menus)
       @menus = params.require(:menus)
-      objective_id = session["objective_id"]["objective_id"]
+      # objective_id = session["objective_id"]["objective_id"]
       @menus.each do |key, menuContents|
         @menu = Menu.new(menuContents.permit(:week_id, :todo, :time, :effect))
         unless @menu.valid?
@@ -50,11 +51,8 @@ class MenusController < ApplicationController
         @menu.objective_id = objective_id
         @menu.save
       end
-      redirect_to objective_path(objective_id) and return
-    else
-      objective_id = session["objective_id"]["objective_id"]
-      redirect_to objective_path(objective_id)
     end
+    redirect_to objective_path(objective_id) and return
   end
 
   def multi_delete
