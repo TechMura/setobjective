@@ -30,8 +30,6 @@ input[name="objective[reward]"]
   height: 30px;
 }
 
-
-
 /* menu登録画面 */
 table{
   height: 30vh;
@@ -60,7 +58,7 @@ th{
   height: 100%;
   border: 1px solid #000000;
   vertical-align: text-top;
-  padding-left: 1.5em;
+  padding-left: 10px;
   white-space: nowrap;
   overflow: auto;
 }
@@ -78,7 +76,7 @@ th{
 	border-radius: 100%;
 	background: #20B97B;
 	position: relative;
-  left: -15px;
+  left: -5px;
 	top: -3px;
 }
 
