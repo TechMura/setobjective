@@ -1,4 +1,3 @@
-// const { $ } = require("@rails/ujs");
 
 function achieveMenu(){
   const menu_checks = document.querySelectorAll(".achieve-check");

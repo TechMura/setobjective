@@ -115,7 +115,7 @@ textarea[name="menu[effect]"]{
 
 .new-memus,
 .form-objective{
-  width: 60%;
+  width: 80%;
   margin: 0px auto;
 }
 
@@ -156,3 +156,17 @@ textarea[name="menu[effect]"]{
 .objective-action{
   display: block;
 }
+
+.menu-field span,
+.objective-field span{
+  position: relative;
+  bottom: 3px;
+  display: inline-block;
+  font-size: 10px;
+  background-color: #f74141;
+  border-radius: 5px;
+  color: #FFFFFF;
+  padding: 0px 2px;
+  margin: auto 5px;
+}
+
