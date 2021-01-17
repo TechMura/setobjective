@@ -6,8 +6,25 @@ function addMenu(){
     const todoContents = document.getElementById("menu_todo");
     const timeContents = document.getElementById("menu_time");
     const weekTableData = document.getElementsByClassName("menu-list");
+    const alertWeekDayComment = document.getElementById("alert-week-comment");
+    const alertTodoComment = document.getElementById("alert-todo-comment");
     
-    if (weekDayContents.value != "" && todoContents.value != ""){
+    if (weekDayContents.value == "" && todoContents.value == ""){
+      alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.remove("hidden"): "" ;
+      alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.remove("hidden"): "" ;
+    }
+    else if (weekDayContents.value == ""){
+      alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.remove("hidden") : "";
+      !alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.add("hidden") : "";
+    }
+    else if (todoContents.value == ""){
+      !alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.add("hidden"): "";
+      alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.remove("hidden"):"";
+    }
+
+    else if (weekDayContents.value != "" && todoContents.value != ""){
+      !alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.add("hidden"): "";
+      !alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.add("hidden"):"";
       // formに入力した内容を追加
       const weekList = document.getElementById('week-list');
       let weekInputHtml = document.createElement('input');

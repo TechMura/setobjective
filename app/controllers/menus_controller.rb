@@ -52,7 +52,8 @@ class MenusController < ApplicationController
       end
       redirect_to objective_path(objective_id) and return
     else
-      render :add_edit
+      objective_id = session["objective_id"]["objective_id"]
+      redirect_to objective_path(objective_id)
     end
   end
 

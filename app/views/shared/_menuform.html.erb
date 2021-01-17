@@ -1,11 +1,15 @@
     <%= form_with model: menu, url: url, id: 'new-memus', class: 'new-memus', local: true do |f| %>
+      <ul class="alert-list">
+        <li class="alert hidden" id="alert-week-comment">曜日が選択されていません。</li>
+        <li class="alert hidden" id="alert-todo-comment">メニューが入力されていません。</li>
+      </ul>
       <div class="menu-field">
-        <%= f.label :week %>
+        <%= f.label :week %><span>必須</span>
         <div><%= f.collection_select(:week_id, Week.all, :id, :name, {include_blank: "曜日を選択して下さい"}, {class:"week-select"}) %></div>
       </div>
       <div id="week-list" class="hidden"></div>
       <div class="menu-field">
-        <%= f.label :todo %>
+        <%= f.label :todo %><span>必須</span>
         <%= f.text_field :todo, autofocus: true %>
       </div>
       <div id="todo-list" class="hidden"></div>
