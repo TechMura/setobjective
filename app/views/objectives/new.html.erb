@@ -1,7 +1,7 @@
 <div class="contents">
   <div class="container">
     <h2>目標入力画面</h2>
-    <%= form_with model: @objective, url: objectives_path, id: 'new-objective', class: 'new-objective', local: true do |f| %>
+    <%= form_with model: @objective, url: objectives_path, id: 'form-objective', class: 'form-objective', local: true do |f| %>
       <%= render 'shared/error_messaes', model: f.object %>
 
       <div class="objective-field">
