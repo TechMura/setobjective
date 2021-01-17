@@ -170,21 +170,3 @@ textarea[name="menu[effect]"]{
   margin: auto 5px;
 }
 
-
-.alert-list li:before {
-	content: '';
-	width: 3px;
-	height: 3px;
-	display: inline-block;
-	border-radius: 100%;
-	background: #f74141;
-	position: relative;
-  left: -5px;
-	top: -3px;
-}
-
-.alert{
-  color: #f74141;
-  width: 100%;
-  padding: 0px 85px;
-}

@@ -42,7 +42,6 @@ class MenusController < ApplicationController
     objective_id = session["objective_id"]["objective_id"]
     if params.has_key?(:menus)
       @menus = params.require(:menus)
-      # objective_id = session["objective_id"]["objective_id"]
       @menus.each do |key, menuContents|
         @menu = Menu.new(menuContents.permit(:week_id, :todo, :time, :effect))
         unless @menu.valid?
