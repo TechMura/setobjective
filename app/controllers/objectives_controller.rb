@@ -1,5 +1,5 @@
 class ObjectivesController < ApplicationController
-  before_action :set_objective, only: [:index]
+  before_action :set_objective, only: [:index, :update]
 
   def index
     if @objective.presence
@@ -33,9 +33,12 @@ class ObjectivesController < ApplicationController
   end
 
   def update
-    @objective = Objective.find(params[:id])
-    if @objective.update(objective_params)
-      redirect_to objective_path(@objective.id)
+    @update_objective = Objective.find(params[:id])
+    if @update_objective.update(objective_params)
+      if @objective.present? && @update_objective.set_flag
+        @objective.update(set_flag: "0")
+      end
+      redirect_to objective_path(@update_objective.id)
     else
       render :edit
     end

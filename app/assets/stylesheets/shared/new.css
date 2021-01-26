@@ -158,7 +158,8 @@ textarea[name="menu[effect]"]{
 }
 
 .menu-field span,
-.objective-field span{
+.objective-field span,
+.user-field span{
   position: relative;
   bottom: 3px;
   display: inline-block;
