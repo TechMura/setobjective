@@ -1,5 +1,6 @@
 class ObjectivesController < ApplicationController
   before_action :set_objective, only: [:index, :update]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     if @objective.presence
