@@ -1,7 +1,7 @@
 <div class="contents">
   <div class="container">
     <h2>目標編集画面</h2>
-    <%= form_with model: @objective, id: 'form-objective', class: 'form-objective', local: true do |f| %>
+    <%= form_with model: @update_objective, id: 'form-objective', class: 'form-objective', local: true do |f| %>
       <%= render 'shared/error_messaes', model: f.object %>
       <div class="objective-field">
         <%= f.label :declaration %><span>必須</span><br />

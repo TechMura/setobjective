@@ -30,7 +30,7 @@ class ObjectivesController < ApplicationController
   end
 
   def edit
-    @objective = Objective.find(params[:id])
+    @update_objective = Objective.find(params[:id])
   end
 
   def update
@@ -41,6 +41,7 @@ class ObjectivesController < ApplicationController
       end
       redirect_to objective_path(@update_objective.id)
     else
+      @update_objective.valid?
       render :edit
     end
   end
