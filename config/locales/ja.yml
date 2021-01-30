@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+      objective:
+        declaration: 目標
+        reason: 目標設定理由
+        reward: 達成報酬
+      menu:
+        week: 曜日
+        todo: メニュー
+        time: 回数
+        effect: メニューの効果
