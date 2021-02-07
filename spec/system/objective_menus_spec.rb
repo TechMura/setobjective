@@ -33,7 +33,7 @@ RSpec.describe "目標、メニュー新規登録", type: :system do
       fill_in 'メニューの効果', with: @menu.effect
       options = page.all('option')
       options.each_with_index do |option, i|
-        if option.value =~ /^[0-9]+$/
+        if option.value =~ /^[0-6]+$/
           option.select_option
           fill_in 'メニュー', with: "#{@menu.todo}#{i}"
           find('button[id="add-btn"]').click
