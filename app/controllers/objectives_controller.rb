@@ -26,7 +26,7 @@ class ObjectivesController < ApplicationController
   end
 
   def show
-    @menus = @objective.menus.to_json
+    @menus = @objective.menus
   end
 
   def edit
