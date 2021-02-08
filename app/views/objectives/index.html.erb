@@ -7,8 +7,8 @@
         <div class="achieve-comment">今日のやること達成！！</br>お疲れ様！！</div>
         <div class="close-btn" id="close-btn">×</div>
       </div>
-      <% if @objective.present? %>
-        <span>目標：</span><%= link_to @objective.declaration, objective_path(@objective.id) ,class: "aaa"%>
+      <% if @setting_objective.present? %>
+        <span>目標：</span><%= link_to @setting_objective.declaration, objective_path(@setting_objective.id) ,class: "aaa"%>
       <% elsif user_signed_in?%>
         <span>目標を設定しよう</span>
       <% else %>
