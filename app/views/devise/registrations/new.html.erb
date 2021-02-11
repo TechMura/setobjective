@@ -1,12 +1,12 @@
 <div class="contents">
   <div class="container">
-    <h2>新規登録画面</h2>
-    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <h1>新規登録画面</h1>
+    <%= form_with model: @user, url: user_registration_path, id: 'user-form', class: 'user-form', local: true do |f| %>
 
       <%= render 'shared/error_messaes', model: f.object %>
 
       <div class="user-field">
-        <%= f.label :nickname %> <em>(8 characters maximum)</em><span>必須</span><br />
+        <%= f.label :nickname %> <em>(最大8文字)</em><span>必須</span><br />
         <%= f.text_field :nickname, autofocus: true, maxlength: "8" %>
       </div>
 
@@ -18,7 +18,7 @@
       <div class="user-field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em><span>必須</span>
+          <em>(<%= @minimum_password_length %> 文字以上)</em><span>必須</span>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
