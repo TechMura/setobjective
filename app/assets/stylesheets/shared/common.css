@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.hidden{
+  display: none;
+}
+
+.back-screen{
+  background-color: #e4e4e4;
+  height: 100vh;
+}
+
+li{
+  list-style: none;
+}
+
+h2{
+  text-align: center;
+}
+
+.contents{
+  margin: 0px auto;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  margin: 30px;
+  width: 80%;
+  height: 750px;
+  padding-bottom: 10px;
+  background-color: #FFFFFF;
+}

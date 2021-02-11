@@ -1,28 +1,4 @@
-* {
-  box-sizing: border-box;
-}
 
-a{
-  text-decoration: none;
-}
-
-
-h1{
-  text-align: center;
-}
-
-.hidden{
-  display: none;
-}
-
-.back-screen{
-  background-color: #e4e4e4;
-  height: 100vh;
-}
-
-li{
-  list-style: none;
-}
 
 .header{
   height: 50px;

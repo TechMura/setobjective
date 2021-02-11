@@ -1,0 +1,26 @@
+<div class="logoff-image-container">
+  <%= image_tag 'logoff_top.jpg',class: 'logoff-image'%>
+  <h3 class="logoff-title">習慣で目標を達成する</h3>
+</div>
+
+<div class="row-container">
+  <h3>3 STEPで習慣化</h3>
+  <div class="row-content">
+    <div class="step-box">
+      <h4 class="step-box-title">STEP1</h4>
+      <div class="step-box-contents">目標を設定</div>
+    </div>
+    <div class="step-box">
+      <h4 class="step-box-title">STEP2</h4>
+      <div class="step-box-contents">曜日別に<br>メニューを設定</div>
+    </div>
+    <div class="step-box">
+      <h4 class="step-box-title">STEP3</h4>
+      <div class="step-box-contents">毎日メニューに<br>取り組む</div>
+    </div>
+  </div>
+  <div class="banner">
+    <%= link_to "ログイン", new_user_session_path, class: "banner-btn"%>
+    <%= link_to "新規登録", new_user_registration_path, class: "banner-btn"%>
+  </div>
+</div>

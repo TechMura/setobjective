@@ -39,6 +39,7 @@
   border-radius: 5px;
   overflow-x: auto;
   overflow-y: auto;
+  white-space: pre-wrap;
 }
 
 #show-effect{
