@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 a{
@@ -42,4 +43,11 @@ h2{
   height: 750px;
   padding-bottom: 10px;
   background-color: #FFFFFF;
+}
+
+@font-face{
+  font-family: "Lato-Black";
+  src: url('/assets/Lato-Black.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

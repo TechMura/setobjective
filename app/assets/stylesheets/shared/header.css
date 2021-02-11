@@ -1,5 +1,4 @@
 
-
 .header{
   height: 50px;
   background-color: #FFFFFF;
@@ -14,11 +13,13 @@
   justify-content: space-between;
 }
 
-.lists-left{
+.logo{
   height: 100%;
-  font-size: 20px;
-  display: flex;
+  font-size: 40px;
   align-items: center;
+  font-weight: 900;
+  font-family: 'Lato-Black';
+  color: #2fb3f0;
 }
 
 .lists-right{
@@ -28,8 +29,7 @@
 }
 
 
-.login,
-.logout{
+.login{
   font-size: 20px;
   margin: 0px 10px;
   font-weight: bold; 
@@ -40,8 +40,4 @@
 
 .login{
   padding: 5px;
-}
-
-.logout{
-  padding: 5px 15px;
 }
