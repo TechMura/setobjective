@@ -1,0 +1,36 @@
+<div class="setting-objective-container">
+  <div class="setting-objective-top-side">
+    <%= image_tag 'back-left.jpeg' ,class: "setting-objective-top-side-image"%>
+  </div>
+  <div class="setting-objective-top-center">
+    <span class="date">日付：</span><span class="date" id="date"></span>
+    <div class="setting-objective-area">
+      <div>目標：</div>
+      <%= link_to @setting_objective.declaration, objective_path(@setting_objective.id), class: "setting-objective-declaration" %>
+    </div>
+    <% if @menus.present? %>
+      <div class="today-menus-contents">
+        <ul class="today-menus">
+          <% @menus.each do |menu| %>
+            <li class="today-menu">
+              <input type="checkbox" class="achieve-check" data-id= <%= menu.id %> data-check=<%= menu.achieve_flag%> data-updated=<%= menu.updated_at %> name="check">
+              <div class="today-menu-todo">
+                <%= menu.todo %>
+                <% unless menu.time.blank? %>
+                  <%= " ( #{menu.time} )" %>
+                <% end %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% else %>
+      <% if user_signed_in? %>
+        <div></div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="setting-objective-top-side">
+    <%= image_tag 'back-right.jpeg' ,class: "setting-objective-top-side-image"%>
+  </div>
+</div>

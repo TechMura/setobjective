@@ -6,84 +6,15 @@
   background-color: #FFFFFF;
 }
 
-.date{
-  height: 40px;
-  font-size: 20px;
-  margin-bottom: 5px;
-  background-color: #FFFFFF;
-}
-
-.today-menus-contents{
-  height: 500px;
-  width: 100%;
-  font-size: 25px;
-  overflow-y: auto;
-  padding: 0px 10px;
-  margin: 5px auto;
-}
-
-.today-menus{
-  padding: 0px;
-}
-
-.today-menu{
-  display: flex;
-  align-items: center;
-}
-
-.today-menu-todo{
-  margin: 10px;
-  height: 50px;
-  padding: 5px;
-  width: 100%;
-  overflow: auto;
-  border: 1px solid #747474;
-  border-radius: 5px;
-}
-
-.today-menu input[type="checkbox"]{
-	position: relative;
-	right: 0;
-	bottom: 0;
-  left: 0;
-	width: 20px;
-	height: 20px;
-  margin-right: 0.5rem;
-	cursor: pointer;
-	color: #FFFFFF;
-  border: 1px solid #2fb3f0;
-  border-radius: 20%;
-	outline: none;
-	background: #FFFFFF;
-	-webkit-appearance: none;
-	        appearance: none;
-}
-
-.today-menu input[type="checkbox"]:checked{
-  background-color: #2fb3f0;
-}
-
-.today-menu input[type="checkbox"]:checked::before{
-  font-size: 15px;
-	line-height: 20px;
-	position: absolute;
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-  content: '✔︎';
-  color: #FFFFFF;
-	text-align: center;
-}
-
 .achieve-pop{
   position: relative;
 }
 
 .achieve-image{
   position: absolute;
-  width: 95%;
-  height: 475px;
-  top: 80px;
+  width: 100%;
+  height: 600px;
+  top: 130px;
   left: 0;
   right: 0;
   margin: auto;
@@ -95,8 +26,8 @@
   position: absolute;
   text-align: center;
   color: #fd9148;
-  font-size: 30px;
-  top: 120px;
+  font-size: 50px;
+  top: 150px;
   left: 0;
   right: 0;
   margin: auto;
@@ -110,7 +41,7 @@
   text-align: center;
   color: #646464;
   font-size: 30px;
-  top: 80px;
+  top: 130px;
   right: 30px;
   z-index: 3;
 }

@@ -40,8 +40,10 @@ function Achieve(menu_checks){
     }
   });
   if (flag == true){
+    const container = document.querySelector(".container")
     const achieve_pop = document.getElementById("achieve-pop");
     const close_btn = document.getElementById("close-btn");
+    container.classList.add("hidden")
     achieve_pop.classList.remove("hidden");
     achieve_pop.style.opacity = 0;
     let opacityInt = achieve_pop.style.opacity * 100;
@@ -54,6 +56,7 @@ function Achieve(menu_checks){
     },100)
     close_btn.addEventListener("click",function(){
       achieve_pop.classList.add("hidden");
+      container.classList.remove("hidden")
     })
   }
 }
