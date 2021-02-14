@@ -1,5 +1,5 @@
 .objective-lists{
-  padding: 5px;
+  padding: 10px;
   height: 60vh;
   width: 80%;
   margin: 10px auto;
@@ -8,20 +8,31 @@
 }
 
 .objective-lists div{
-  margin: 10px 0px;
   width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.objective-lists div::-webkit-scrollbar{
+  display: none;
 }
 
 
 .objective-list{
-  width: 100%;
-  margin: 10px 0px;
-  padding: 10px 0px 10px 10px;
+  display: inline-block;
+  width: max-content;
+  margin-top: 20px;
+  font-size: 30px;
   color: #2fb3f0;
 }
 
+.objective-list::-webkit-scrollbar{
+  display: none;
+}
+
 .add-objective-link{
-  width: 100%;
+  display: inline-block;
+  font-size: 30px;
   border: 1px dashed #000000;
   padding: 10px 10px 10px 10px;
   color: #2fb3f0;
