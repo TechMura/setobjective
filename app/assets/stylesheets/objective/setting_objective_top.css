@@ -32,6 +32,11 @@
   width: 80%;
   overflow-x: auto;
   white-space: nowrap; 
+  color: #000000;
+}
+
+.setting-objective-declaration:hover{
+  color: #2fb3f0;
 }
 
 .setting-objective-declaration::-webkit-scrollbar{

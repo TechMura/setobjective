@@ -8,13 +8,16 @@
 
 .achieve-pop{
   position: relative;
+  width: 70%;
+  height: 70%;
 }
 
 .achieve-image{
-  position: absolute;
+  position: relative;
+  align-items: center;
   width: 100%;
-  height: 600px;
-  top: 130px;
+  height: 100%;
+  top: 10px;
   left: 0;
   right: 0;
   margin: auto;
@@ -27,7 +30,7 @@
   text-align: center;
   color: #fd9148;
   font-size: 50px;
-  top: 150px;
+  top: 50px;
   left: 0;
   right: 0;
   margin: auto;
@@ -41,7 +44,7 @@
   text-align: center;
   color: #646464;
   font-size: 30px;
-  top: 130px;
+  top: 20px;
   right: 30px;
   z-index: 3;
 }

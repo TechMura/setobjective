@@ -1,11 +1,12 @@
 <div class="contents">
+  <div class="achieve-pop hidden", id="achieve-pop">
+    <%= image_tag 'achieve-image.jpg',class: 'achieve-image'%>
+    <div class="achieve-comment">今日のやること達成！！<br>お疲れ様でした！！</div>
+    <div class="close-btn" id="close-btn">×</div>
+  </div>
   <div class= "container">
     <div class="objective-declaration">
-      <div class="achieve-pop hidden", id="achieve-pop">
-        <%= image_tag 'achieve-image.jpg',class: 'achieve-image'%>
-        <div class="achieve-comment">今日のやること達成！！<br>お疲れ様でした！！</div>
-        <div class="close-btn" id="close-btn">×</div>
-      </div>
+
       <% if @setting_objective.present? %>
         <%# ログインして目標が設定されている時のトップ画面 %>
         <%= render partial: "shared/setting_objective_top"%>
