@@ -3,18 +3,19 @@
     <div class="objective-declaration">
       <div class="achieve-pop hidden", id="achieve-pop">
         <%= image_tag 'achieve-image.jpg',class: 'achieve-image'%>
-        <div class="achieve-comment">今日のやること達成！！</br>お疲れ様！！</div>
+        <div class="achieve-comment">今日のやること達成！！<br>お疲れ様！！</div>
         <div class="close-btn" id="close-btn">×</div>
       </div>
       <% if @setting_objective.present? %>
         <span class="date">日付：</span><span class="date" id="date"></span>
         <span>目標：</span><%= link_to @setting_objective.declaration, objective_path(@setting_objective.id) ,class: "aaa"%>
       <% elsif user_signed_in?%>
-        <span class="date">日付：</span><span class="date" id="date"></span>
-        <span>目標を設定しよう</span>
+        <%# 目標が設定されていないときのトップ画面 %>
+        <%= render partial: "shared/not_setting_objective_top" %>
       <% else %>
-        <%# ログインしていない時のトップ %>
-        <%= render partial: "shared/not_sign_top" %>
+        <%# ログインしていない時のトップ画面 %>
+        <%= render partial: "shared/not_sign_top" 
+        %>
       <% end %>
     </div>
 
@@ -36,7 +37,7 @@
       </div>
     <% else %>
       <% if user_signed_in? %>
-        <div>今日のメニューはありません</div>
+        <div></div>
       <% end %>
     <% end %>
   </div>

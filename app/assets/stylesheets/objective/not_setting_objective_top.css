@@ -1,0 +1,34 @@
+.not-setting-objective-image{
+  height: 350px;
+  width: 100%;
+}
+
+.not_setting_objective_container{
+  position: relative;;
+  top: -120px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: #2fb3f0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  height: 250px;
+  width: 750px;
+}
+
+.not_setting_objective_comment{
+  color: #FFFFFF;
+}
+
+.not_setting_link{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.not_setting_link:hover{
+  color: #f7f455;
+  font-size: larger;
+}

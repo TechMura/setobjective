@@ -3,11 +3,6 @@
     <h1>ログイン画面</h1>
     <%= form_with model: @user, url: user_session_path, id: 'user-form', class: 'user-form', local: true do |f| %>
       <div class="error-alert">
-        <% if notice %>
-          <ul>
-            <li class='error-message'><%= notice %></li>
-          </ul>  
-        <% end %>
         <% if alert %>
           <ul>
             <li class='error-message'><%= alert %></li>
