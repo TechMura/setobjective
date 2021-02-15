@@ -4,7 +4,12 @@
     <div class="objective-lists">
       <%= link_to '＋新しい目標を追加', new_objective_path, class: "add-objective-link" %>
       <% @objectives.each do |objective| %> 
-        <div>
+        <div class="objective-link-container">
+          <div class="setting-objective-mark">
+            <% if objective.set_flag == true %>
+              <span>設定中</span>
+            <% end %>
+          </div>
           <%= link_to "#{objective.declaration}", objective_path(objective.id) ,class: "objective-list"%>
         </div>
       <% end %>

@@ -7,23 +7,38 @@
   overflow-y: auto;
 }
 
-.objective-lists div{
+.objective-link-container{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
   width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
 }
 
 .objective-lists div::-webkit-scrollbar{
   display: none;
 }
 
+.setting-objective-mark{
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  width: 70px;
+}
+
+.setting-objective-mark span{
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #f02f2f;
+  color: #FFFFFF;
+}
 
 .objective-list{
   display: inline-block;
-  width: max-content;
-  margin-top: 20px;
+  width: 70%;
   font-size: 30px;
   color: #2fb3f0;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .objective-list::-webkit-scrollbar{
@@ -35,6 +50,7 @@
   font-size: 30px;
   border: 1px dashed #000000;
   padding: 10px 10px 10px 10px;
+  margin-left: 70px;
   color: #2fb3f0;
 }
 
