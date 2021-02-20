@@ -25,9 +25,8 @@
         </ul>
       </div>
     <% else %>
-      <% if user_signed_in? %>
-        <div></div>
-      <% end %>
+      <%# 今日のメニューが存在しないとき %>
+      <%= render partial: "shared/nothing_menu_top"  %>
     <% end %>
   </div>
   <div class="setting-objective-top-side">

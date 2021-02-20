@@ -1,0 +1,18 @@
+<div class="tomorrow-menu-contents">
+  <div class="nothing-comment">
+    今日のメニューはありません
+  </div>
+  <div class="tomorrow-menus-container">
+    <div>明日のメニュー</div>
+    <ul class="tomorrow-menus">
+      <% if @tomorrow_menus.present? %>
+        <% @tomorrow_menus.each do |menu| %>
+          <li class="tomorrow-menu"><%= menu.todo %></li>
+        <% end %>
+      <% else %>
+        <li class="nothing-tomorrow-menu-comment">明日もメニューはありません</li>
+      <% end %>
+    </ul>
+    
+  </div>
+</div>

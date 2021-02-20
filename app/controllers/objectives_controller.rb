@@ -1,4 +1,5 @@
 class ObjectivesController < ApplicationController
+  require "Date"
   before_action :set_setting_objective, only: [:index, :update]
   before_action :set_objective, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
@@ -6,8 +7,12 @@ class ObjectivesController < ApplicationController
 
   def index
     if @setting_objective.presence
-      now = Time.now
-      @menus = @setting_objective.menus.where(week_id: now.wday)
+      today = Date.today
+      @menus = @setting_objective.menus.where(week_id: today.wday)
+      unless @menus.present?
+        tomorrow_date = today + 1
+        @tomorrow_menus = @setting_objective.menus.where(week_id: tomorrow_date.wday)
+      end
     end
   end
 
