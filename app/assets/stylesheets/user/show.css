@@ -1,34 +1,94 @@
+.user-show-container{
+  height: 100%;
+  left: 100%;
+  display: flex;
+}
+
+.user-show-left{
+  height: 100%;
+  width: 20%;
+}
+
+.user-show-right{
+  height: 100%;
+  width: 20%;
+}
+
+.user-show-center{
+  height: 100%;
+  width: 60%;
+}
+
+.user-show-image{
+  height: 101.5%;
+  width: 100%;
+}
+
 .objective-lists{
-  padding: 5px;
-  height: 60vh;
-  width: 80%;
-  margin: 10px auto;
+  padding: 10px;
+  height: 80%;
+  width: 100%;
+  margin: 0 auto;
   font-size: 30px;
   overflow-y: auto;
 }
 
-.objective-lists div{
-  margin: 10px 0px;
+.objective-link-container{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
   width: 100%;
 }
 
+.objective-lists div::-webkit-scrollbar{
+  display: none;
+}
+
+.setting-objective-mark{
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  width: 70px;
+}
+
+.setting-objective-mark span{
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #f02f2f;
+  color: #FFFFFF;
+}
 
 .objective-list{
   width: 100%;
-  margin: 10px 0px;
-  padding: 10px 0px 10px 10px;
+  font-size: 30px;
   color: #2fb3f0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.objective-list:hover{
+  transform:scale(1.0,1.6);
+  transition-duration:1s;
+}
+
+.objective-list::-webkit-scrollbar{
+  display: none;
 }
 
 .add-objective-link{
-  width: 100%;
-  border: 1px dashed #000000;
-  padding: 10px 10px 10px 10px;
-  color: #2fb3f0;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 50px;
+  margin-left: 70px;
+  padding: 5px;
+  background-color: #2fb3f0;
+  color: #FFFFFF;
 }
 
-.edit-btn{
-  display: flex;
+.add-objective-link:hover{
+  color: #f7f455;
+  transform:scale(1.0,1.6);
+  transition-duration:1s;
 }
 
 .edit-btn .button_to{

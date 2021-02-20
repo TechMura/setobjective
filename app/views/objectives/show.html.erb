@@ -3,7 +3,15 @@
     <div class="objective-contents">
       <div><span>目標　：</span><span><%= @objective.declaration %></span></div>
       <div><span>理由　：</span><span><%= @objective.reason %></span></div>
-      <div><span>ご褒美：</span><span><%= @objective.reward %></span></div>
+      <div><span>ご褒美：</span>
+        <span>
+          <% if @objective.reward == ""%>
+            <span>設定なし</span>
+          <% else %>
+            <%= @objective.reward %>
+          <% end %>
+        </span>
+      </div>
       <div class="edit-btn">
         <%= button_to "目標の編集", edit_objective_path(@objective.id), method: :get %>
         <%= button_to "目標の削除", objective_path(@objective.id), method: :delete, data: { confirm: "本当に削除しますか？", disable_with: 'loading...' } %>
@@ -37,7 +45,7 @@
         </tr>
       </table>
     </div>
-    <div>※メニューをクリックしたら内容が表示されます</div>
+
     <div class="menu-detail">
         <div class="menu-detail-title">メニュー：</div>
         <div id="show-menu" class="menu-detail-contents"></div>
@@ -50,5 +58,6 @@
         <div class="menu-detail-title">効果　　：</div>
         <div id="show-effect" class="menu-detail-contents"></div>
     </div>
+    <div class="caution-comment">※メニューをクリックしたら内容が表示されます</div>
   </div>
 </div>

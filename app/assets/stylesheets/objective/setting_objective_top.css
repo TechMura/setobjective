@@ -1,0 +1,109 @@
+.setting-objective-container{
+  display: flex;
+  height: 750px;
+}
+
+.setting-objective-top-center{
+  width: 60%;
+}
+
+.setting-objective-top-side{
+  width: 20%;
+}
+.setting-objective-top-side-image{
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.date{
+  height: 40px;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.setting-objective-area{
+  display: flex;
+  height: 70px;
+}
+
+.setting-objective-declaration{
+  display: inline-block;
+  width: 80%;
+  overflow-x: auto;
+  white-space: nowrap; 
+  color: #000000;
+}
+
+.setting-objective-declaration:hover{
+  color: #2fb3f0;
+}
+
+.setting-objective-declaration::-webkit-scrollbar{
+  display: none;
+}
+
+
+.today-menus-contents{
+  height: 600px;
+  width: 100%;
+  font-size: 25px;
+  overflow-y: auto;
+  padding: 0px 10px;
+  margin: 5px auto;
+}
+
+.today-menus{
+  padding: 0px;
+}
+
+.today-menu{
+  display: flex;
+  align-items: center;
+}
+
+.today-menu-todo{
+  display: inline-block;
+  margin: 10px;
+  height: 70px;
+  font-size: 30px;
+  padding: 12px 5px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #747474;
+  border-radius: 5px;
+}
+
+.today-menu input[type="checkbox"]{
+	position: relative;
+	right: 0;
+	bottom: 0;
+  left: 0;
+	width: 30px;
+	height: 30px;
+  margin-right: 0.5rem;
+	cursor: pointer;
+	color: #FFFFFF;
+  border: 1px solid #2fb3f0;
+  border-radius: 20%;
+	outline: none;
+	background: #FFFFFF;
+	-webkit-appearance: none;
+	        appearance: none;
+}
+
+.today-menu input[type="checkbox"]:checked{
+  background-color: #2fb3f0;
+}
+
+.today-menu input[type="checkbox"]:checked::before{
+  font-size: 25px;
+	line-height: 28px;
+	position: absolute;
+	display: inline-block;
+	width: 25px;
+	height: 30px;
+  content: '✔︎';
+  color: #FFFFFF;
+	text-align: center;
+}

@@ -1,40 +1,20 @@
 <div class="contents">
+  <div class="achieve-pop hidden", id="achieve-pop">
+    <%= image_tag 'achieve-image.jpg',class: 'achieve-image'%>
+    <div class="achieve-comment">今日のやること達成！！<br>お疲れ様でした！！</div>
+    <div class="close-btn" id="close-btn">×</div>
+  </div>
   <div class= "container">
-    <span class="date">日付：</span><span class="date" id="date"></span>
     <div class="objective-declaration">
-      <div class="achieve-pop hidden", id="achieve-pop">
-        <%= image_tag '達成画象.jpg',class: 'achieve-image'%>
-        <div class="achieve-comment">今日のやること達成！！</br>お疲れ様！！</div>
-        <div class="close-btn" id="close-btn">×</div>
-      </div>
       <% if @setting_objective.present? %>
-        <span>目標：</span><%= link_to @setting_objective.declaration, objective_path(@setting_objective.id) ,class: "aaa"%>
+        <%# ログインして目標が設定されている時のトップ画面 %>
+        <%= render partial: "shared/setting_objective_top"%>
       <% elsif user_signed_in?%>
-        <span>目標を設定しよう</span>
+        <%# 目標が設定されていないときのトップ画面 %>
+        <%= render partial: "shared/not_setting_objective_top" %>
       <% else %>
-        <span>ログイン または 新規登録して下さい</span>
-      <% end %>
-    </div>
-
-    <div class="today-menus-contents">
-      <% if @menus.present? %>
-        <ul class="today-menus">
-            <% @menus.each do |menu| %>
-              <li class="today-menu">
-                <input type="checkbox" class="achieve-check" data-id= <%= menu.id %> data-check=<%= menu.achieve_flag%> data-updated=<%= menu.updated_at %> name="check">
-                <div class="today-menu-todo">
-                  <%= menu.todo %>
-                  <% unless menu.time.blank? %>
-                    <%= " ( #{menu.time} )" %>
-                  <% end %>
-                </div>
-              </li>
-            <% end %>
-        </ul>
-      <% else %>
-        <% if user_signed_in? %>
-          <div>今日のメニューはありません</div>
-        <% end %>
+        <%# ログインしていない時のトップ画面 %>
+        <%= render partial: "shared/not_sign_top" %>
       <% end %>
     </div>
   </div>

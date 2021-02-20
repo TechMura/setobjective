@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+h1{
+  text-align: center;
+  font-size: 40px;
+}
+
+h2{
+  text-align: center;
+}
+
+
+.hidden{
+  display: none;
+}
+
+.back-screen{
+  background-color: #c4c2c2;
+  height: 100vh;
+}
+
+li{
+  list-style: none;
+}
+
+.contents{
+  margin: 0px auto;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  margin: 30px;
+  width: 80%;
+  height: 750px;
+  padding-bottom: 10px;
+  background-color: #FFFFFF;
+}
+
+@font-face{
+  font-family: "Lato-Black";
+  src: url('/assets/Lato-Black.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

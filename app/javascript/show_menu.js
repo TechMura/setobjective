@@ -9,7 +9,6 @@ function show_menu(){
       let showMenuContent = document.getElementById("show-menu");
       let showTimeContent = document.getElementById("show-time");
       let showEffectContent = document.getElementById("show-effect");
-      let menuId = menuElement.getAttribute("data-id")
 
 
       showMenuContent.innerHTML = todoData;

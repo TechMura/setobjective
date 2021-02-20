@@ -1,0 +1,71 @@
+.logoff-image-container{
+  height: 275px;
+}
+
+.logoff-image{
+  height: 275px;
+  width: 100%;
+}
+
+.logoff-title{
+  display: block;
+  align-items: center;
+  color: #FFFFFF;
+  text-shadow: 0 0 3px #000000;
+  text-align: center;
+  position: relative;
+  top: -100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.row-container h3{
+  text-align: center;
+  margin: 20px;
+  
+}
+
+.row-content{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.step-box{
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #7bd0f7;
+  color: #000000;
+}
+
+.step-box-title{
+  margin: 20px 0px 0px;
+}
+
+.step-box-contents{
+  height: 100px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.banner-btn{
+  font-size: 30px;
+  font-weight: bold; 
+  color: #2fb3f0;
+  border: 2px solid #2fb3f0;
+  border-radius: 5px;
+  margin: 0px 20px;
+  padding: 0px 10px;
+}

@@ -1,0 +1,39 @@
+.tomorrow-menu-contents{
+  height: 70%;
+}
+
+.nothing-comment{
+  text-align: center;
+}
+
+.tomorrow-menus-container{
+  border: 1px solid #000000;
+  height: 90%;
+  border-radius: 5px;
+  margin: 30px 20px;
+  padding-bottom: 10px;
+}
+
+.tomorrow-menus-container div{
+  text-align: center;
+}
+
+.tomorrow-menus{
+  height: calc(100% - 50px);
+  width: 90%;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+.tomorrow-menu{
+  overflow-x: auto;
+}
+
+.tomorrow-menu::-webkit-scrollbar{
+  display: none;
+}
+
+.nothing-tomorrow-menu-comment{
+  height: 100%;
+  padding: auto 0;
+}

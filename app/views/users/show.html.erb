@@ -1,13 +1,28 @@
 <div class="contents">
-  <div class="container"> 
-    <h1>目標一覧</h1>
-    <div class="objective-lists">
-      <%= link_to '＋新しい目標を追加', new_objective_path, class: "add-objective-link" %>
-      <% @objectives.each do |objective| %> 
-        <div>
-          <%= link_to "#{objective.declaration}", objective_path(objective.id) ,class: "objective-list"%>
+  <div class="container">
+    <div class="user-show-container">
+      <div class="user-show-left">
+        <%= image_tag 'user-left.jpeg' ,class: "user-show-image"%>
+      </div>
+      <div class="user-show-center">
+        <h1>目標一覧</h1>
+          <%= link_to '新しい目標を追加する', new_objective_path, class: "add-objective-link" %>
+        <div class="objective-lists">
+          <% @objectives.each do |objective| %> 
+            <div class="objective-link-container">
+              <div class="setting-objective-mark">
+                <% if objective.set_flag == true %>
+                  <span>設定中</span>
+                <% end %>
+              </div>
+              <%= link_to "#{objective.declaration}", objective_path(objective.id) ,class: "objective-list"%>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
+      <div class="user-show-right">
+        <%= image_tag 'user-right.jpeg' ,class: "user-show-image" %>
+      </div>
     </div>
   </div>
 </div>

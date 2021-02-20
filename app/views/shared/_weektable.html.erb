@@ -1,28 +1,28 @@
-    <div>
-      <table>
-        <tr>
-          <th>日</th>
-          <th>月</th>
-          <th>火</th>
-          <th>水</th>
-          <th>木</th>
-          <th>金</th>
-          <th>土</th>
-        </tr>
-        <tr>
-          <% 7.times do |num| %>
-            <td>
-              <ul class="menu-list">
-                <% if objective.present? %>
-                    <% objective.menus.where(week_id: num).each do |menu| %>
-                      <li><%= menu.todo %>
-                        <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
-                      </li>
-                    <% end %>
+<div>
+  <table>
+    <tr>
+      <th>日</th>
+      <th>月</th>
+      <th>火</th>
+      <th>水</th>
+      <th>木</th>
+      <th>金</th>
+      <th>土</th>
+    </tr>
+    <tr>
+      <% 7.times do |num| %>
+        <td>
+          <ul class="menu-list">
+            <% if objective.present? %>
+                <% objective.menus.where(week_id: num).each do |menu| %>
+                  <li><%= menu.todo %>
+                    <%= button_to '削除', menu_path(menu.id), method: :delete ,class: "delete-btn hidden", params: {objective_id: @objective.id} %>
+                  </li>
                 <% end %>
-              </ul>
-            </td>
-          <% end %>
-        </tr>
-      </table>
-    </div>
+            <% end %>
+          </ul>
+        </td>
+      <% end %>
+    </tr>
+  </table>
+</div>
