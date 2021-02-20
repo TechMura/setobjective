@@ -1,0 +1,80 @@
+
+.form-objective{
+  width: 60%;
+  margin: 0px auto;
+}
+
+.objective-field{
+  padding: 0px 50px;
+  margin: 30px 10px;
+}
+
+.objective-field label{
+  font-size: 25px;
+}
+
+.check-field{
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 25px;
+}
+
+.form-objective input[name="commit"]{
+  display: block;
+  margin: 20px auto;
+}
+
+input[name="objective[declaration]"],
+input[name="objective[reason]"],
+input[name="objective[reward]"]
+{
+  display: block;
+  margin: 0px auto;
+  font-size: 25px;
+  width: 100%;
+  height: 40px;
+}
+
+
+.check-field{
+  width: 400px;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.check-field input[type="checkbox"]{
+	position: relative;
+	right: 0;
+	bottom: 0;
+  left: 0;
+	width: 20px;
+	height: 20px;
+  margin-right: 0.5rem;
+	cursor: pointer;
+	color: #FFFFFF;
+  border: 1px solid #2fb3f0;
+  border-radius: 20%;
+	outline: none;
+	background: #FFFFFF;
+	-webkit-appearance: none;
+	        appearance: none;
+}
+
+.check-field input[type="checkbox"]:checked{
+  background-color: #2fb3f0;
+}
+
+.check-field input[type="checkbox"]:checked::before{
+  font-size: 15px;
+	line-height: 20px;
+	position: absolute;
+	display: inline-block;
+	width: 18px;
+	height: 15px;
+  content: '✔︎';
+  color: #FFFFFF;
+	text-align: center;
+}

@@ -44,8 +44,3 @@ input[name="user[password_confirmation]"]
   border-radius:30px;
   margin: 10px auto 30px;
 }
-
-input[type="checkbox"]{
-  margin-left: 20px;
-}
-

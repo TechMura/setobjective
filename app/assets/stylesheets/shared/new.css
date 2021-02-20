@@ -1,33 +1,4 @@
 
-/* objective 登録画面 */
-
-.objective-field{
-  padding: 0px 50px;
-  margin: 10px 10px;
-}
-
-.check-field{
-  display: block;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.form-objective input[name="commit"]{
-  display: block;
-  margin: 20px auto;
-}
-
-input[name="objective[declaration]"],
-input[name="objective[reason]"],
-input[name="objective[reward]"]
-{
-  display: block;
-  margin: 0px auto;
-  font-size: 15px;
-  width: 60%;
-  height: 30px;
-}
-
 /* menu登録画面 */
 table{
   height: 30vh;
@@ -72,7 +43,7 @@ th{
 	height: 3px;
 	display: inline-block;
 	border-radius: 100%;
-	background: #20B97B;
+	background: #2fb3f0;
 	position: relative;
   left: -5px;
 	top: -3px;
@@ -112,8 +83,7 @@ textarea[name="menu[effect]"]{
 
 /* objective, menu 共通 */
 
-.new-memus,
-.form-objective{
+.new-memus{
   width: 80%;
   margin: 0px auto;
 }
@@ -122,7 +92,7 @@ textarea[name="menu[effect]"]{
 .objective-action-btn{
   display: block;
   color: #FFFFFF;
-  background-color: #33e1ca;
+  background-color: #2fb3f0;
   border: 0px;
   text-align: center;
   font-size: 20px;
@@ -134,7 +104,7 @@ textarea[name="menu[effect]"]{
 .end-action-btn{
   display: block;
   color: #FFFFFF;
-  background-color: #33e1ca;
+  background-color: #2fb3f0;
   border: 0px;
   text-align: center;
   font-size: 20px;
