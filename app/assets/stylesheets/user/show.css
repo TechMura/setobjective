@@ -87,10 +87,8 @@
 
 .add-objective-link:hover{
   color: #f7f455;
-}
-
-.edit-btn{
-  display: flex;
+  transform:scale(1.0,1.6);
+  transition-duration:1s;
 }
 
 .edit-btn .button_to{

@@ -2,6 +2,13 @@
   font-size: 30px;
 }
 
+.edit-btn{
+  height: 50px;
+  display: flex;
+  padding-left: 10px;
+}
+
+
 .objective-contents div span{
   position: relative;
   left: 100px;
@@ -14,7 +21,7 @@
 .menu-detail{
   font-size: 20px;
   font-size: 30px;
-  margin: 0px 40px;
+  margin: 10px 40px;
   padding-top: 5px ;
   display: flex;
   
@@ -44,4 +51,9 @@
 
 #show-effect{
   height: 100px;
+}
+
+.caution-comment{
+  font-size: 20px;
+  margin: 0 40px;
 }
