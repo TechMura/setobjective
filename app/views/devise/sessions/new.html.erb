@@ -19,13 +19,6 @@
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
-      <% if devise_mapping.rememberable? %>
-        <div class="user-field", id="remember_me">
-          <%= f.label :remember_me %><br />
-          <%= f.check_box :remember_me %>
-        </div>
-      <% end -%>
-
       <div class="user-actions">
         <%= f.submit "ログイン" ,class:"user-action" %>
       </div>

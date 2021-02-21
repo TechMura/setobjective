@@ -67,7 +67,7 @@
 }
 
 .objective-list:hover{
-  transform:scale(1.0,1.6);
+  transform:scale(1.0,1.4);
   transition-duration:1s;
 }
 
@@ -79,6 +79,7 @@
   display: inline-block;
   font-size: 20px;
   border-radius: 50px;
+  box-shadow: 5px 5px 5px #909090;
   margin-left: 70px;
   padding: 5px;
   background-color: #2fb3f0;
@@ -87,8 +88,7 @@
 
 .add-objective-link:hover{
   color: #f7f455;
-  transform:scale(1.0,1.6);
-  transition-duration:1s;
+  /* box-shadow: 0px 0px 0px #909090; */
 }
 
 .edit-btn .button_to{
