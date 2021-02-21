@@ -74,6 +74,10 @@
   border-radius: 5px;
 }
 
+.today-menu-todo::-webkit-scrollbar{
+  display: none;
+}
+
 .today-menu input[type="checkbox"]{
 	position: relative;
 	right: 0;
