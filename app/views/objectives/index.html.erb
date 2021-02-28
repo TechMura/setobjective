@@ -10,7 +10,7 @@
         <%# ログインして目標が設定されている時のトップ画面 %>
         <%= render partial: "shared/setting_objective_top"%>
       <% elsif user_signed_in?%>
-        <%# 目標が設定されていないときのトップ画面 %>
+        <%# ログインして目標が設定されていないときのトップ画面 %>
         <%= render partial: "shared/not_setting_objective_top" %>
       <% else %>
         <%# ログインしていない時のトップ画面 %>
