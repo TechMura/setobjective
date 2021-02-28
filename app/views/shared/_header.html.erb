@@ -6,9 +6,9 @@
     <% if user_signed_in? %>
       <div>
         <ul class="lists-right">
-          <li><%= link_to "トップページ", root_path, class: "login" %></li>
-          <li><%= link_to "目標一覧", user_path(current_user.id), class: "login" %></li>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, class: "login", method: :delete%></li>
+          <li><%= link_to "トップページ", root_path, class: "header-btn" %></li>
+          <li><%= link_to "目標一覧", user_path(current_user.id), class: "header-btn" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, class: "header-btn", method: :delete%></li>
         </ul>
       </div>
     <% end %>
