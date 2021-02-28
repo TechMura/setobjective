@@ -19,6 +19,7 @@
 .date{
   height: 40px;
   font-size: 25px;
+  margin-left: 5px;
   margin-bottom: 5px;
 }
 
@@ -29,14 +30,12 @@
 
 .setting-objective-area div{
   width: 120px;
-  white-space: nowrap;
 }
 
 .setting-objective-declaration{
   display: inline-block;
   width: 80%;
   overflow-x: auto;
-  white-space: nowrap; 
   color: #000000;
 }
 
