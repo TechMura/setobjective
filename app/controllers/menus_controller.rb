@@ -5,10 +5,10 @@ class MenusController < ApplicationController
   end
 
   def create
-      @objective = Objective.find_by(user_id: current_user.id,set_flag: "1")
-      @new_objective = Objective.new(session["new_objective_data"]["objective"])
-      @new_objective.save
-      check_flag
+    @objective = Objective.find_by(user_id: current_user.id,set_flag: "1")
+    @new_objective = Objective.new(session["new_objective_data"]["objective"])
+    @new_objective.save
+    check_flag
     if params[:menus]
       @menus = params.require(:menus)
       @menus.each do |key, menuContents|
@@ -70,7 +70,6 @@ class MenusController < ApplicationController
     else
       menu.update(achieve_flag: true)
     end
-
     item = Menu.find(params[:id])
     render json: { menu: item }
   end

@@ -14,6 +14,4 @@ Rails.application.routes.draw do
       get 'reset_achieve_flag'
     end
   end
-
-
 end

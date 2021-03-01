@@ -1,6 +1,5 @@
 .setting-objective-container{
   display: flex;
-  height: 750px;
 }
 
 .setting-objective-top-center{
@@ -47,9 +46,8 @@
   display: none;
 }
 
-
 .today-menus-contents{
-  height: 600px;
+  height: 563px;
   width: 100%;
   font-size: 25px;
   overflow-y: auto;
