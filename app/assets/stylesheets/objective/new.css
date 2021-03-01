@@ -1,6 +1,14 @@
+.objective-form-container{
+  border: solid 1px #888888;
+  border-radius: 5px;
+  margin: 40px auto 0px;
+  width: 60%;
+  box-shadow: 0 10px 20px 5px #7cc7e9;
+}
+
 
 .form-objective{
-  width: 60%;
+  width: 100%;
   margin: 0px auto;
 }
 
