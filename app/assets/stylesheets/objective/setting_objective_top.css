@@ -2,6 +2,7 @@
   display: flex;
 }
 
+
 .setting-objective-top-center{
   width: 60%;
 }
@@ -10,7 +11,7 @@
   width: 20%;
 }
 .setting-objective-top-side-image{
-  height: 100%;
+  height: 700px;
   width: 100%;
   opacity: 0.6;
 }
