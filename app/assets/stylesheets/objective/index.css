@@ -8,8 +8,9 @@
 
 .achieve-pop{
   position: relative;
-  width: 70%;
-  height: 70%;
+  top: -30px;
+  width: 60%;
+  height: 80%;
 }
 
 .achieve-image{
