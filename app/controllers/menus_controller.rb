@@ -75,6 +75,7 @@ class MenusController < ApplicationController
   end
 
   def reset_achieve_flag
+    binding.pry
     menu = Menu.find(params[:id])
     menu.update(achieve_flag: false)
     item = Menu.find(params[:id])
