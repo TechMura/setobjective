@@ -23,7 +23,6 @@ function confirm_date(updated_at){
   const today_year = today.getFullYear();
   const today_month = today.getMonth() + 1;
   const today_date = today.getDate();
-
   if (updated_year == today_year){
     if (updated_month == today_month){
       return updated_date < today_date;

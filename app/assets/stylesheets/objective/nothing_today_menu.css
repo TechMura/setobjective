@@ -29,11 +29,13 @@
   height: 300px;
   margin: 0 auto;
   overflow-y: auto;
+  padding: 0;
 }
 
 .tomorrow-menu{
   overflow-x: auto;
   font-size: 25px;
+
 }
 
 .tomorrow-menu::-webkit-scrollbar{
@@ -41,6 +43,7 @@
 }
 
 .nothing-tomorrow-menu-comment{
+  text-align: center;
   height: 100%;
   padding: auto 0;
 }
