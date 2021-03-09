@@ -48,11 +48,11 @@
 }
 
 .step-box-contents{
-  height: 50px;
   font-size: 25px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: max-content;
+  margin-top: 5px;
 }
 
 .banner{
