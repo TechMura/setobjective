@@ -54,6 +54,8 @@ PASS:testuser <br>
 ## 目標削除
 
 ## メニュー追加
+![edit_menu_add](https://user-images.githubusercontent.com/71863912/110760175-c4e2d180-8291-11eb-996c-8ddaab243dc5.gif)
+* 目標詳細画面から「メニュー追加」をクリックすると、メニュー追加画面へ遷移します
 
 ## メニュー削除
 
