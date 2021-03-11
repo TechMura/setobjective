@@ -41,7 +41,7 @@ PASS:testuser <br>
 * 「次へ」をクリックすると、メニュー追加画面へ遷移します
 
 ## メニュー設定
-![add_menu](https://user-images.githubusercontent.com/71863912/110755421-4a638300-828c-11eb-8e98-7f1a9a23da0b.gif)
+![add_menu](https://user-images.githubusercontent.com/71863912/110761612-48e98900-8293-11eb-8901-4efb67b835ac.gif)
 * 各項目を入力し、「追加」をクリックする上部にある週間表にメニューが追加されます
 * 週間表にある「削除」をクリックすると、追加したメニューが削除されます
 * 「登録」をクリックすると保存され、トップページへ移動します
