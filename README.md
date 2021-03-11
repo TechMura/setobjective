@@ -30,8 +30,9 @@ PASS:testuser <br>
 ## トップページ
 その日のメニューが表示され、チェックが入るとポップが表示される
 
-![top_achieve](https://user-images.githubusercontent.com/71863912/110751369-1c2f7480-8287-11eb-8245-85b2af97073f.gif)
 
+## 目標設定
+ヘッダーの目標一覧から目標追加する
 
 
 
