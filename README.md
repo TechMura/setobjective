@@ -52,6 +52,9 @@ PASS:testuser <br>
 * 「目標の編集」をクリックすると、編集画面へ遷移します
 
 ## 目標削除
+![delete_objective](https://user-images.githubusercontent.com/71863912/110762143-d4631a00-8293-11eb-8e28-7b2fc2c492ed.gif)
+* 目標詳細画面から「目標の削除」をクリックします
+* 確認画面のポップが表示されるので、「OK」をクリックすると目標が削除されます
 
 
 ## メニュー追加
