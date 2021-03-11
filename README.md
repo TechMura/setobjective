@@ -33,7 +33,7 @@ PASS:testuser <br>
 
 ## 目標設定
 ヘッダーの目標一覧から目標追加する
-
+![set_objective](https://user-images.githubusercontent.com/71863912/110752981-4bdf7c00-8289-11eb-9a96-4a2a6cbf78bc.gif)
 
 
 
