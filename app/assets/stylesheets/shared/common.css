@@ -63,3 +63,7 @@ li{
   font-weight: normal;
   font-style: normal;
 }
+
+::placeholder {
+  color: #bbbbbb;
+}

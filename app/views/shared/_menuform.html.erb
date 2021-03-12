@@ -12,17 +12,17 @@
       <div id="week-list" class="hidden"></div>
       <div class="menu-field">
         <%= f.label :todo %><span>必須</span>
-        <%= f.text_field :todo, autofocus: true %>
+        <%= f.text_field :todo, autofocus: true, placeholder: '例:ランニング' %>
       </div>
       <div id="todo-list" class="hidden"></div>
       <div class="menu-field">
         <%= f.label :time %>
-        <%= f.text_field :time %>
+        <%= f.text_field :time , placeholder: '例:30分'%>
       </div>
       <div id="time-list" class="hidden"></div>
       <div class="menu-field">
         <%= f.label :effect %>
-        <%= f.text_area :effect%>
+        <%= f.text_area :effect, placeholder: '例:走り出して約20分で脂肪が多く燃焼される' %>
       </div>
       <div id="effect-list" class="hidden"></div>
       <div class="menu-action">
