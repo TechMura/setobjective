@@ -2,32 +2,7 @@
   <div class="container">
     <div class = "objective-form-container"> 
       <h1>目標編集画面</h1>
-      <%= form_with model: @objective, id: 'form-objective', class: 'form-objective', local: true do |f| %>
-        <%= render 'shared/error_messaes', model: f.object %>
-        <div class="objective-field">
-          <%= f.label :declaration %><span>必須</span><br />
-          <%= f.text_field :declaration, autofocus: true %>
-        </div>
-        
-        <div class="objective-field">
-          <%= f.label :reason %><span>必須</span><br />
-          <%= f.text_field :reason, autofocus: true %>
-        </div>
-
-        <div class="objective-field">
-          <%= f.label :reward %><br />
-          <%= f.text_field :reward, autofocus: true %>
-        </div>
-        
-        <div class="check-field">
-          <%= f.check_box :set_flag %>
-          <span>今の目標に設定するならチェック<span>
-        </div>
-
-        <div class="objective-action">
-          <%= f.submit "更新" , class: "objective-action-btn"%>
-        </div>
-      <% end %>
+        <%= render partial: "shared/objectiveform", locals: { objective: @objective, url: objective_path(@objective.id) } %>
     </div>
   </div>
 </div>

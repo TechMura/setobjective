@@ -1,0 +1,32 @@
+<%= form_with model: objective, url: url, id: 'form-objective', class: 'form-objective', local: true do |f| %>
+  <%= render 'shared/error_messaes', model: f.object %>
+  <div class="objective-field">
+    <%= f.label :declaration %><span>必須</span><br />
+    <%= f.text_field :declaration, autofocus: true , placeholder: '例:体重を5kg減らす'%>
+  </div>
+
+  <div class="objective-field">
+    <%= f.label :reason %><span>必須</span><br />
+    <%= f.text_field :reason, placeholder: '例:外出が減り、体重が増えたから'%>
+  </div>
+
+  <div class="objective-field">
+    <%= f.label :reward %><br />
+    <%= f.text_field :reward, placeholder: '例:スイーツを食べにいく'%>
+  </div>
+
+  <div class="check-field">
+    <%= f.check_box :set_flag %>
+    <span>今の目標に設定するならチェック<span>
+  </div>
+
+  <div class="objective-action">
+    <%# 目標新規登録のボタン %>
+    <% if request.path.include?('objectives/new')%>
+      <%= f.submit "次へ" , class: "objective-action-btn"%>
+    <% else request.path.include?('objectives/edit') %>
+    <%# 目標編集の時のボタン %>
+      <%= f.submit "更新" , class: "objective-action-btn"%>
+    <% end %>
+  </div>
+<% end %>
