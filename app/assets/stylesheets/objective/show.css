@@ -1,5 +1,21 @@
 .objective-contents{
   font-size: 30px;
+  width: 90%;
+}
+
+.objective-contents-container{
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+
+}
+
+.objective-contents-container::-webkit-scrollbar{
+  display: none;
 }
 
 .edit-btn{

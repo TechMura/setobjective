@@ -1,8 +1,8 @@
 <div class="contents">
   <div class="container"> 
     <div class="objective-contents">
-      <div><span>目標　：</span><span><%= @objective.declaration %></span></div>
-      <div><span>理由　：</span><span><%= @objective.reason %></span></div>
+      <div><span>目標　：</span><span class="objective-contents-container"><%= @objective.declaration %></span></div>
+      <div><span>理由　：</span><span class="objective-contents-container"><%= @objective.reason %></span></div>
       <div><span>ご褒美：</span>
         <span>
           <% if @objective.reward == ""%>
