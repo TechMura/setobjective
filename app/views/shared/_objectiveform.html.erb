@@ -24,9 +24,10 @@
     <%# 目標新規登録のボタン %>
     <% if request.path.include?('objectives/new')%>
       <%= f.submit "次へ" , class: "objective-action-btn"%>
-    <% else request.path.include?('objectives/edit') %>
     <%# 目標編集の時のボタン %>
+    <% else request.path.include?('objectives/edit') %>
       <%= f.submit "更新" , class: "objective-action-btn"%>
     <% end %>
+    
   </div>
 <% end %>
