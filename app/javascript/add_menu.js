@@ -84,7 +84,7 @@ function addMenu(){
 }
 
 window.addEventListener('load',function(){
-  if (document.getElementById("add-btn") != null){
+  if (document.URL.match(/objectives/) && document.getElementById("add-btn") != null){
     addMenu();
   };
 });
