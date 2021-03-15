@@ -30,10 +30,11 @@ class MenusController < ApplicationController
     @objective_id = params[:objective_id]
     @menu = Menu.find(params[:id])
     @menu.destroy
-    redirect_to multi_delete_menus_path(objective_id: @objective_id)
+    # redirect_to multi_delete_menus_path(objective_id: @objective_id)
+    redirect_to add_edit_menus_path(objective_id: @objective_id)
   end
 
-  def add_edit
+  def multi_edit
     @objective = Objective.find(params[:objective_id])
     @menus = @objective.menus
     session["objective_id"] = {objective_id: @objective.id}

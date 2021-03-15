@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :objectives
   resources :menus, only: [:new, :create, :destroy] do
     collection do
-      get 'add_edit'
+      get 'multi_edit'
       post 'add_update'
       get 'multi_delete'
     end
