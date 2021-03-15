@@ -27,11 +27,10 @@ class MenusController < ApplicationController
   end
 
   def destroy
-    @objective_id = params[:objective_id]
+    # @objective_id = params[:objective_id]
     @menu = Menu.find(params[:id])
     @menu.destroy
-    # redirect_to multi_delete_menus_path(objective_id: @objective_id)
-    redirect_to add_edit_menus_path(objective_id: @objective_id)
+    render 'destroy.js.erb'
   end
 
   def multi_edit
