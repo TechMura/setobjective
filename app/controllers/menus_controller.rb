@@ -27,9 +27,9 @@ class MenusController < ApplicationController
   end
 
   def destroy
-    # @objective_id = params[:objective_id]
     @menu = Menu.find(params[:id])
     @menu.destroy
+    # destroy.js.erbで表示を消す
     render 'destroy.js.erb'
   end
 
