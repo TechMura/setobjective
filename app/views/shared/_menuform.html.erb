@@ -26,7 +26,13 @@
       </div>
       <div id="effect-list" class="hidden"></div>
       <div class="menu-action">
+      <% if request.path.include?('/objectives')%>
         <button type="button" class="menu-action-btn" id="add-btn">追加</button>
         <%= f.submit "登録", class:"menu-action-btn", id: "menu-action-btn" %>
+      <% elsif request.path.include?('/menus/multi_edit') %>
+        <%= f.submit "追加", class:"menu-action-btn", id: "menu-action-btn" %>
+        <%= button_to '終了', objective_path(@objective.id), class: "menu-action-btn" %> 
+        <%# type="button" class="menu-action-btn" id="add-btn">終了</button> %>
+      <% end %>
       </div>
     <% end %>

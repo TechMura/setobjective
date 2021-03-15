@@ -1,9 +1,11 @@
 
 function multiEditMenu(){
-  const deleteBtns = Array.from(document.getElementsByClassName("delete-btn"));
-  deleteBtns.forEach(function(deleteBtn){
+  // const deleteBtns = Array.from(document.getElementsByClassName("delete-btn"));
+  // deleteBtns.forEach(function(deleteBtn){
 
-  });
+  // const
+
+  // });
 };
 
 function deleteMenu(){
