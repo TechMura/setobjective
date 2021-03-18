@@ -15,28 +15,28 @@ function addCreateMenu(){
     if (weekDayContents.value == "" && todoContents.value == ""){
       alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.remove("hidden"): "" ;
       alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.remove("hidden"): "" ;
-      return
+      return null;
     }
     else if (weekDayContents.value == ""){
       alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.remove("hidden") : "";
       !alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.add("hidden") : "";
-      return
+      return null;
     }
     else if (todoContents.value == ""){
       !alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.add("hidden"): "";
       alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.remove("hidden"):"";
-      return
+      return null;
     }
 
     else if (weekDayContents.value != "" && todoContents.value != ""){
       !alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.add("hidden"): "";
       !alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.add("hidden"):"";
 
-      const formData = new FormData(document.getElementById("menu-form"));
-      const XHR = new XMLHttpRequest();
-      XHR.open("POST", "/menus/add_create", true);
+      // const formData = new FormData(document.getElementById("menu-form"));
+      // const XHR = new XMLHttpRequest();
+      // XHR.open("POST", "/menus/add_create", true);
 
-      XHR.responseType = "json";
+      // XHR.responseType = "json";
 
       XHR.onload = function(){
         if (XHR.status != 200) {
@@ -44,25 +44,25 @@ function addCreateMenu(){
           return null;
         }
         
-        // const item = XHR.response.menu
+        const item = XHR.response.menu
         // // スケジュール表に追加する
-        // let addMenuContents = document.createElement('li') ;
-        // let deleteMenuBtn = document.createElement('button');
+        let addMenuContents = document.createElement('li');
+        let deleteMenuBtn = document.createElement('button');
 
-        // addMenuContents.textContent = item.todo;
-        // addMenuContents.id = item.id ;
-        // deleteMenuBtn.textContent = "削除";
-        // deleteMenuBtn.id = item.id;
-        // deleteMenuBtn.style.display = 'block';
-        // weekTableData[weekDayContents.value].appendChild(addMenuContents);
-        // addMenuContents.appendChild(deleteMenuBtn);
+        addMenuContents.textContent = item.todo;
+        addMenuContents.id = item.id ;
+        deleteMenuBtn.textContent = "削除";
+        deleteMenuBtn.id = item.id;
+        deleteMenuBtn.style.display = 'block';
+        weekTableData[weekDayContents.value].appendChild(addMenuContents);
+        addMenuContents.appendChild(deleteMenuBtn);
       };
     }
   });
 }
 
 window.addEventListener('load',function(){
-  if (document.URL.match(/multi_edit/)){
+  if (document.URL.match(/multi_edit/) || document.URL.match(/add_create/)){
     addCreateMenu();
   }
 });
