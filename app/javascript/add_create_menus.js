@@ -32,11 +32,12 @@ function addCreateMenu(){
       !alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.add("hidden"): "";
       !alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.add("hidden"):"";
 
-      // const formData = new FormData(document.getElementById("menu-form"));
-      // const XHR = new XMLHttpRequest();
-      // XHR.open("POST", "/menus/add_create", true);
+      const formData = new FormData(document.getElementById("menu-form"));
+      const XHR = new XMLHttpRequest();
+      XHR.open("POST", "/menus/add_create", true);
 
-      // XHR.responseType = "json";
+      XHR.responseType = "json";
+      XHR.send(formData);
 
       XHR.onload = function(){
         if (XHR.status != 200) {
@@ -44,7 +45,9 @@ function addCreateMenu(){
           return null;
         }
         
+
         const item = XHR.response.menu
+
         // // スケジュール表に追加する
         let addMenuContents = document.createElement('li');
         let deleteMenuBtn = document.createElement('button');
@@ -57,6 +60,7 @@ function addCreateMenu(){
         weekTableData[weekDayContents.value].appendChild(addMenuContents);
         addMenuContents.appendChild(deleteMenuBtn);
       };
+      e.preventDefault();
     }
   });
 }
