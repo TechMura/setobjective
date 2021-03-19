@@ -8,7 +8,7 @@ class MenusController < ApplicationController
     @objective = Objective.find_by(user_id: current_user.id,set_flag: "1")
     @new_objective = Objective.new(session["new_objective_data"]["objective"])
     @new_objective.save
-    check_flag
+    check_setting_flag
     if params[:menus]
       @menus = params.require(:menus)
       @menus.each do |key, menuContents|
@@ -73,7 +73,7 @@ class MenusController < ApplicationController
     params.require(:menus).permit(week_id: [], todo: [], time: [], effect: [])
   end
 
-  def check_flag
+  def check_setting_flag
     if @objective.present? && @new_objective.set_flag
       @objective.update(set_flag: "0")
     end

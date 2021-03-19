@@ -1,40 +1,37 @@
-    <%= form_with model: menu, url: url ,method: :post, id: 'menu-form', class: 'menu-form', remote: true do |f| %>
-      <div class="error-alert">
-        <ul>
-          <li class="error-message hidden" id="alert-week-comment">曜日を選択してください</li>
-          <li class="error-message hidden" id="alert-todo-comment">メニューを入力してください</li>
-        </ul>
-      </div>
-      <div class="menu-field">
-        <%= f.label :week %><span>必須</span>
-        <div><%= f.collection_select(:week_id, Week.all, :id, :name, {include_blank: "曜日を選択して下さい"}, {class:"week-select"}) %></div>
-      </div>
-      <div id="week-list" class="hidden"></div>
-      <div class="menu-field">
-        <%= f.label :todo %><span>必須</span>
-        <%= f.text_field :todo, autofocus: true, placeholder: '例:ランニング' %>
-      </div>
-      <div id="todo-list" class="hidden"></div>
-      <div class="menu-field">
-        <%= f.label :time %>
-        <%= f.text_field :time , placeholder: '例:30分'%>
-      </div>
-      <div id="time-list" class="hidden"></div>
-      <div class="menu-field">
-        <%= f.label :effect %>
-        <%= f.text_area :effect, placeholder: '例:走り出して約20分で脂肪が多く燃焼される' %>
-      </div>
-      <div id="effect-list" class="hidden"></div>
-      <div class="menu-action">
-      <% if request.path.include?('/objectives')%>
-        <button type="button" class="menu-action-btn" id="add-btn">追加</button>
-        <%= f.submit "登録", class:"menu-action-btn", id: "menu-action-btn" %>
-      <% elsif request.path.include?('/menus/multi_edit') || request.path.include?('/add_create') %>
-        <%# <button class="menu-action-btn", id = "add-btn"> 追加 </button> %>
-        <%= f.submit '追加', class:"menu-action-btn", id: "add-btn" %>
-        <%# <%= f.submit "追加", class:"menu-action-btn", id: "add-btn" %> 
-        <%= button_to "終了", objective_path(@objective.id), params: {objective_id: @objective.id} , class: "menu-action-btn"  %>
-        <%# type="button" class="menu-action-btn" id="add-btn">終了</button> %>
-      <% end %>
-      </div>
-    <% end %>
+<%= form_with model: menu, url: url ,method: :post, id: 'menu-form', class: 'menu-form', local: local_flag do |f| %>
+  <div class="error-alert">
+    <ul>
+      <li class="error-message hidden" id="alert-week-comment">曜日を選択してください</li>
+      <li class="error-message hidden" id="alert-todo-comment">メニューを入力してください</li>
+    </ul>
+  </div>
+  <div class="menu-field">
+    <%= f.label :week %><span>必須</span>
+    <div><%= f.collection_select(:week_id, Week.all, :id, :name, {include_blank: "曜日を選択して下さい"}, {class:"week-select"}) %></div>
+  </div>
+  <div id="week-list" class="hidden"></div>
+  <div class="menu-field">
+    <%= f.label :todo %><span>必須</span>
+    <%= f.text_field :todo, autofocus: true, placeholder: '例:ランニング' %>
+  </div>
+  <div id="todo-list" class="hidden"></div>
+  <div class="menu-field">
+    <%= f.label :time %>
+    <%= f.text_field :time , placeholder: '例:30分'%>
+  </div>
+  <div id="time-list" class="hidden"></div>
+  <div class="menu-field">
+    <%= f.label :effect %>
+    <%= f.text_area :effect, placeholder: '例:走り出して約20分で脂肪が多く燃焼される' %>
+  </div>
+  <div id="effect-list" class="hidden"></div>
+  <div class="menu-action">
+  <% if request.path.include?('/objectives')%>
+    <button type="button" class="menu-action-btn" id="add-btn">追加</button>
+    <%= f.submit "登録", class:"menu-action-btn", id: "menu-action-btn" %>
+  <% elsif request.path.include?('/menus/multi_edit') || request.path.include?('/add_create') %>
+    <%= f.submit '追加', class:"menu-action-btn", id: "add-btn" %>
+    <%= link_to "終了", objective_path(@objective.id), method: :get, params: {objective_id: @objective.id}, class: "menu-action-btn" %>
+  <% end %>
+  </div>
+<% end %>
