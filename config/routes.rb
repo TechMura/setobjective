@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     collection do
       get 'multi_edit'
       post 'add_create'
-      get 'multi_delete'
     end
     member do
       get 'achieved'

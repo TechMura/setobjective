@@ -47,27 +47,6 @@ class MenusController < ApplicationController
     params_menu = params[:menu]
     menu = Menu.create(week_id: params_menu[:week_id], todo: params_menu[:todo],time: params_menu[:time], effect: params_menu[:effect], objective_id: objective_id)
     render json:{ menu: menu }
-    # redirect_to root_path
-    # render json: {}
-    # objective_id = session["objective_id"]["objective_id"]
-    # if params.has_key?(:menus)
-    #   @menus = params.require(:menus)
-    #   @menus.each do |key, menuContents|
-    #     @menu = Menu.new(menuContents.permit(:week_id, :todo, :time, :effect))
-    #     unless @menu.valid?
-    #       render :new_menu and return
-    #     end
-    #     @menu.objective_id = objective_id
-    #     @menu.save
-    #   end
-    # end
-    # redirect_to objective_path(objective_id) and return
-  end
-
-  def multi_delete
-    @menus = @objective.menus
-    session["objective_id"] = {objective_id: @objective.id}
-    @menu = Menu.new
   end
 
   def achieved

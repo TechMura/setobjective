@@ -17,7 +17,6 @@
       <%= button_to "目標の編集", edit_objective_path(@objective.id), method: :get %>
       <%= button_to "目標の削除", objective_path(@objective.id), method: :delete, data: { confirm: "本当に削除しますか？", disable_with: 'loading...' } %>
       <%= button_to "メニュー編集", multi_edit_menus_path, method: :get, params: {objective_id: @objective.id}  %>
-      <%= button_to "メニュー削除", multi_delete_menus_path, method: :get, params: {objective_id: @objective.id} %>
     </div>
     <div>
       <table>
