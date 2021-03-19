@@ -46,7 +46,7 @@ function addCreateMenu(){
         }
         const item = XHR.response.menu
 
-        // // スケジュール表に追加する
+        // // スケジュール表に要素追加する
         let addMenuContents = document.createElement('li');
         let deleteMenuBtn = document.createElement('button');
         const HTML = `
@@ -56,24 +56,13 @@ function addCreateMenu(){
           
         </form>
         `
-        // <input type="hidden" name="authenticity_token" value="8/c6kF9VNCCT8DDqHo+GwhsFbnPkhRbXdVUORfTdhYSsqwVH1TfO61XNKTp2u76DFXmItV2HF+HzNCOkGN6WJQ==">
-
         addMenuContents.textContent = item.todo;
         addMenuContents.id = item.id ;
         deleteMenuBtn.textContent = "削除";
         deleteMenuBtn.id = item.id;
         deleteMenuBtn.style.display = 'block';
         weekTableData[weekDayContents.value].appendChild(addMenuContents);
-        // addMenuContents.appendChild(deleteMenuBtn);
         addMenuContents.insertAdjacentHTML("beforeend", HTML);
-        deleteMenuBtn.addEventListener('click',function(){
-          var body = {
-          }
-          XHR.open("DELETE", `/menus/${item.id}`,true)
-          XHR.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-          XHR.setRequestHeader('Content-Type', 'application/json');
-        })
-
       };
       e.preventDefault();
     }
@@ -81,7 +70,7 @@ function addCreateMenu(){
 }
 
 window.addEventListener('load',function(){
-  if (document.URL.match(/multi_edit/) || document.URL.match(/add_create/)){
+  if (document.URL.match(/multi_edit/)){
     addCreateMenu();
   }
 });
