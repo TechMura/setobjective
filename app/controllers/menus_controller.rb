@@ -40,12 +40,15 @@ class MenusController < ApplicationController
     @menu = Menu.new
   end
 
-  def add_update
+  def add_create
     objective_id = session["objective_id"]["objective_id"]
+    @objective = Objective.find(objective_id)
+    @menus = @objective.menus
     params_menu = params[:menu]
-    binding.pry
     menu = Menu.create(week_id: params_menu[:week_id], todo: params_menu[:todo],time: params_menu[:time], effect: params_menu[:effect], objective_id: objective_id)
     render json:{ menu: menu }
+    # redirect_to root_path
+    # render json: {}
     # objective_id = session["objective_id"]["objective_id"]
     # if params.has_key?(:menus)
     #   @menus = params.require(:menus)

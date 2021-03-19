@@ -31,7 +31,7 @@
         <%= f.submit "登録", class:"menu-action-btn", id: "menu-action-btn" %>
       <% elsif request.path.include?('/menus/multi_edit') || request.path.include?('/add_create') %>
         <%# <button class="menu-action-btn", id = "add-btn"> 追加 </button> %>
-        <%= f.submit '投稿する', class:"menu-action-btn", id: "add-btn" %>
+        <%= f.submit '追加', class:"menu-action-btn", id: "add-btn" %>
         <%# <%= f.submit "追加", class:"menu-action-btn", id: "add-btn" %> 
         <%= button_to "終了", objective_path(@objective.id), params: {objective_id: @objective.id} , class: "menu-action-btn"  %>
         <%# type="button" class="menu-action-btn" id="add-btn">終了</button> %>

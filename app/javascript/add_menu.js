@@ -25,6 +25,7 @@ function addMenu(){
     else if (weekDayContents.value != "" && todoContents.value != ""){
       !alertWeekDayComment.classList.contains("hidden") ? alertWeekDayComment.classList.add("hidden"): "";
       !alertTodoComment.classList.contains("hidden") ? alertTodoComment.classList.add("hidden"):"";
+
       // formに入力した内容を追加
       const weekList = document.getElementById('week-list');
       let weekInputHtml = document.createElement('input');
