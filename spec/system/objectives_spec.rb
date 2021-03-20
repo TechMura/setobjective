@@ -12,8 +12,8 @@ RSpec.describe "目標の編集", type: :system do
       fill_in 'パスワード', with: @objective.user.password
       find('input[name="commit"]').click
       expect(current_path).to eq root_path
-      # マイページに移動
-      expect(page).to have_link 'マイページ', href: user_path(@objective.user.id)
+      # 目標一覧に移動
+      expect(page).to have_link '目標一覧', href: user_path(@objective.user.id)
       visit user_path(@objective.user.id)
       expect(page).to have_content(@objective.declaration)
       # 目標詳細ページへ移動
@@ -52,10 +52,10 @@ RSpec.describe "目標の編集", type: :system do
     end
   end
   context "目標を編集できないとき" do
-    it "ログインしていないとマイページに移動できず、目標編集画面にいけない" do
-      # トップページにマイページに遷移するボタンがないことを確認
+    it "ログインしていないと目標一覧に移動できず、目標編集画面にいけない" do
+      # トップページに目標一覧に遷移するボタンがないことを確認
       visit root_path
-      expect(page).to have_no_link 'マイページ', href: user_path(@objective.user.id)
+      expect(page).to have_no_link '目標一覧', href: user_path(@objective.user.id)
     end
   end
 end
@@ -71,8 +71,8 @@ RSpec.describe "目標の削除", type: :system do
       fill_in 'パスワード', with: @objective.user.password
       find('input[name="commit"]').click
       expect(current_path).to eq root_path
-      # マイページに移動
-      expect(page).to have_link 'マイページ', href: user_path(@objective.user.id)
+      # 目標一覧に移動
+      expect(page).to have_link '目標一覧', href: user_path(@objective.user.id)
       visit user_path(@objective.user.id)
       expect(page).to have_content(@objective.declaration)
       # 目標詳細ページへ移動
@@ -86,7 +86,7 @@ RSpec.describe "目標の削除", type: :system do
         page.driver.browser.switch_to.alert.accept
         find ".add-objective-link"
       }.to change{ Objective.count }.by(-1)
-      # マイページに遷移していることを確認
+      # 目標一覧に遷移していることを確認
       expect(current_path).to eq user_path(@objective.user.id)
       # 削除した目標がさくじょされていることを確認する
       expect(page).to have_no_content(@objective.declaration)
@@ -94,9 +94,9 @@ RSpec.describe "目標の削除", type: :system do
   end
   context "目標を削除できないとき" do
     it "ログインしていない状態では登録した目標を削除できない" do
-      # トップページにマイページに遷移するボタンがないことを確認
+      # トップページに目標一覧に遷移するボタンがないことを確認
       visit root_path
-      expect(page).to have_no_link 'マイページ', href: user_path(@objective.user.id)
+      expect(page).to have_no_link '目標一覧', href: user_path(@objective.user.id)
     end
   end
 end
