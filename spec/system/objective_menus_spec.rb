@@ -18,7 +18,7 @@ RSpec.describe "目標、メニュー新規登録", type: :system do
       expect(current_path).to eq root_path
       # マイページへ移動
       visit user_path(@user.id)
-      expect(page).to have_content('＋新しい目標を追加')
+      expect(page).to have_content('新しい目標を追加する')
       #目標追加画面へ移動
       visit new_objective_path
       # 目標を入力
@@ -61,7 +61,7 @@ RSpec.describe "目標、メニュー新規登録", type: :system do
       expect(current_path).to eq root_path
       # マイページへ移動
       visit user_path(@user.id)
-      expect(page).to have_content('＋新しい目標を追加')
+      expect(page).to have_content('新しい目標を追加する')
       #目標追加画面へ移動
       visit new_objective_path
       # 目標を入力
@@ -95,7 +95,7 @@ RSpec.describe "目標、メニュー新規登録", type: :system do
       expect(current_path).to eq root_path
       # マイページへ移動
       visit user_path(@user.id)
-      expect(page).to have_content('＋新しい目標を追加')
+      expect(page).to have_content('新しい目標を追加する')
       #目標追加画面へ移動
       visit new_objective_path
       # 目標を入力
@@ -119,7 +119,7 @@ RSpec.describe "目標、メニュー新規登録", type: :system do
       expect(current_path).to eq root_path
       # マイページへ移動
       visit user_path(@user.id)
-      expect(page).to have_content('＋新しい目標を追加')
+      expect(page).to have_content('新しい目標を追加する')
       #目標追加画面へ移動
       visit new_objective_path
       # 目標を入力
