@@ -25,7 +25,7 @@
     <% if request.path.include?('objectives/new')%>
       <%= f.submit "次へ" , class: "objective-action-btn"%>
     <%# 目標編集の時のボタン %>
-    <% elsif request.path.include?('objectives/edit') %>
+    <% elsif request.path.include?("objectives/#{objective.id}/edit") %>
       <%= f.submit "更新" , class: "objective-action-btn"%>
     <% end %>
     
