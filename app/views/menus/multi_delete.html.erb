@@ -1,9 +1,0 @@
-<div class="contents">
-  <div class="container"> 
-  <h1>メニュー削除画面</h1>
-    <%= render partial: "shared/weektable", locals: {objective: @objective} %>
-    <div class="menu-action">
-      <%= link_to "削除終了", objective_path(@objective.id) , class: "end-action-btn"%>
-    </div>
-  </div>
-</div>

@@ -2,6 +2,6 @@
   <div class="container">
   <h1>メニュー登録画面</h1>
     <%= render partial: "shared/weektable", locals: { objective: @objective} %>
-    <%= render partial: "shared/menuform", locals: { menu: @menu, url: menus_path } %>
+    <%= render partial: "shared/menuform", locals: { menu: @menu, url: menus_path , local_flag: true } %>
   </div>
 </div>

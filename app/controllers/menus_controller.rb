@@ -8,7 +8,7 @@ class MenusController < ApplicationController
     @objective = Objective.find_by(user_id: current_user.id,set_flag: "1")
     @new_objective = Objective.new(session["new_objective_data"]["objective"])
     @new_objective.save
-    check_flag
+    check_setting_flag
     if params[:menus]
       @menus = params.require(:menus)
       @menus.each do |key, menuContents|
@@ -27,40 +27,26 @@ class MenusController < ApplicationController
   end
 
   def destroy
-    @objective_id = params[:objective_id]
     @menu = Menu.find(params[:id])
     @menu.destroy
-    redirect_to multi_delete_menus_path(objective_id: @objective_id)
+    # destroy.js.erbで表示を消す
+    render 'destroy.js.erb'
   end
 
-  def add_edit
+  def multi_edit
     @objective = Objective.find(params[:objective_id])
     @menus = @objective.menus
     session["objective_id"] = {objective_id: @objective.id}
     @menu = Menu.new
   end
 
-  def add_update
+  def add_create
     objective_id = session["objective_id"]["objective_id"]
-    if params.has_key?(:menus)
-      @menus = params.require(:menus)
-      @menus.each do |key, menuContents|
-        @menu = Menu.new(menuContents.permit(:week_id, :todo, :time, :effect))
-        unless @menu.valid?
-          render :new_menu and return
-        end
-        @menu.objective_id = objective_id
-        @menu.save
-      end
-    end
-    redirect_to objective_path(objective_id) and return
-  end
-
-  def multi_delete
-    @objective = Objective.find(params[:objective_id])
+    @objective = Objective.find(objective_id)
     @menus = @objective.menus
-    session["objective_id"] = {objective_id: @objective.id}
-    @menu = Menu.new
+    params_menu = params[:menu]
+    menu = Menu.create(week_id: params_menu[:week_id], todo: params_menu[:todo],time: params_menu[:time], effect: params_menu[:effect], objective_id: objective_id)
+    render json:{ menu: menu }
   end
 
   def achieved
@@ -87,7 +73,7 @@ class MenusController < ApplicationController
     params.require(:menus).permit(week_id: [], todo: [], time: [], effect: [])
   end
 
-  def check_flag
+  def check_setting_flag
     if @objective.present? && @new_objective.set_flag
       @objective.update(set_flag: "0")
     end

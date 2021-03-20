@@ -18,6 +18,7 @@
   height: 35px;
   border-radius:30px;
   margin: 0px auto 30px;
+  padding: 3px 0px;
 }
 .end-action-btn{
   display: block;

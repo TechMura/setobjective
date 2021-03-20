@@ -5,9 +5,8 @@ Rails.application.routes.draw do
   resources :objectives
   resources :menus, only: [:new, :create, :destroy] do
     collection do
-      get 'add_edit'
-      post 'add_update'
-      get 'multi_delete'
+      get 'multi_edit'
+      post 'add_create'
     end
     member do
       get 'achieved'

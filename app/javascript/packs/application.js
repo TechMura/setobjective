@@ -9,11 +9,12 @@ require("@rails/activestorage").start()
 require("channels")
 require("header")
 require("add_menu")
-require("delete_menu")
+require("add_create_menus")
 require("date")
 require("reset_achieve_flag")
 require("check_menu")
 require("show_menu")
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
