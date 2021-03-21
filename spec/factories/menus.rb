@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :menu do
     week_id       {rand(0..6)}
-    todo          {"メニュー"}
+    sequence(:todo,"メニュー1")
     time          {"回数"}
     effect        {"メニューの効果"}
 
