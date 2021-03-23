@@ -64,8 +64,8 @@ PASS:testuser <br>
 * 目標詳細画面から「メニュー編集」をクリックすると、メニュー追加画面へ遷移します
 * 各項目を記入し、追加をクリックすると登録されます
 
-## メニュー削除
-![edit_menu_delete](https://user-images.githubusercontent.com/71863912/110760740-5baf8e00-8292-11eb-8ec8-acb2eb790462.gif)
+### メニュー削除
+![edit_delete_menu](https://user-images.githubusercontent.com/71863912/112079241-29236080-8bc3-11eb-96bd-07315178f040.gif)
 * 目標詳細画面から「メニュー削除」をクリックすると、メニュー追加画面へ遷移します
 
 # 工夫したポイント
