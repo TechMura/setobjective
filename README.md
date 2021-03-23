@@ -57,9 +57,11 @@ PASS:testuser <br>
 * 確認画面のポップが表示されるので、「OK」をクリックすると目標が削除されます
 
 
-## メニュー追加
-![edit_menu_add](https://user-images.githubusercontent.com/71863912/110760175-c4e2d180-8291-11eb-996c-8ddaab243dc5.gif)
-* 目標詳細画面から「メニュー追加」をクリックすると、メニュー追加画面へ遷移します
+## メニュー編集
+メニューの追加・削除はメニュー編集画面の1画面でできます
+### メニュー追加
+![edit_add_menu](https://user-images.githubusercontent.com/71863912/112078329-90401580-8bc1-11eb-93aa-662069f0a4b2.gif)
+* 目標詳細画面から「メニュー編集」をクリックすると、メニュー追加画面へ遷移します
 
 ## メニュー削除
 ![edit_menu_delete](https://user-images.githubusercontent.com/71863912/110760740-5baf8e00-8292-11eb-8ec8-acb2eb790462.gif)
