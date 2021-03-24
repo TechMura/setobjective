@@ -8,6 +8,13 @@ a{
   text-decoration: none;
 }
 
+li{
+  list-style: none;
+}
+
+::placeholder {
+  color: #bbbbbb;
+}
 
 h1{
   text-align: center;
@@ -31,10 +38,6 @@ body{
   background-color: #c4c2c2;
   height: 100%;
   min-height: 775px;
-}
-
-li{
-  list-style: none;
 }
 
 .contents{
@@ -64,6 +67,3 @@ li{
   font-style: normal;
 }
 
-::placeholder {
-  color: #bbbbbb;
-}
